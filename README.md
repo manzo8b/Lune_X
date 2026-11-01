@@ -92,3 +92,17 @@ I sei file binari sono presenti in `assets/audio/` e `assets/images/`. I duplica
 - Interfaccia condivisa fra italiano, inglese e spagnolo; audio, album, social, Apple Music e link esterni preservati.
 - Il logo MANZO AI compare solo nei footer, mentre l'identità Lune_X è nell'intestazione e nel vinile.
 - Verifica statica: un H1 per homepage; 3 anteprime MP3, artwork e percorsi esistenti per lingua; deploy riuscito. Test visuale reale desktop/mobile ancora da effettuare.
+
+## Regola editoriale obbligatoria — titoli senza punto finale
+
+**Ogni titolo e sottotitolo deve terminare senza punto fermo**, su tutte le lingue (IT, EN, ES): hero, headings H1-H6, card, discografia, artisti ospiti, social, documentazione e futuri aggiornamenti. Il punto fermo rimane nella prosa normale quando grammaticalmente necessario.
+
+## Revisione grafica finale — 1 novembre 2026
+
+- Il logo principale in intestazione proviene dal visual Lune_X approvato: `assets/images/lunex-logo-header.avif`. L'icona rossa precedentemente utilizzata come marchio principale è stata sostituita.
+- La hero mostra cuffie e vinile del mockup: `assets/images/lunex-hero-headphones.avif`. Rimane su fondo chiaro, con layout e CTA funzionanti.
+- Ordine home: hero, tre brani, galleria visual, artista ospite, social, sezioni approfondite.
+- Tre artwork originali Lune_X mantenuti quadrati e non deformati; la copertina «Presunte Realtà» di Pier Paolo Piccioni è esclusiva dello spazio ospite.
+- I tre mini-player usano elementi HTML audio, play/pausa e slider con gestione di metadati, tempo di ascolto e riproduzione esclusiva senza autoplay. Gli MP3 originali nel repo non sono modificati.
+- Tipografia, dimensioni e contenuti sono adattati per desktop, tablet, smartphone e tre lingue; il logo MANZO AI rimane nel footer.
+- Audit del repository: 12 pagine presenti, un H1 per pagina, nessun punto finale nei titoli, tutti i riferimenti ai media risolti.
