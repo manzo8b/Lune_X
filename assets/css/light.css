@@ -691,3 +691,23 @@ body.home-page .preview-section .preview-content{min-height:175px!important}
  body.home-page .preview-section .preview-card{min-height:132px!important}
  body.home-page .preview-section .preview-content{min-height:132px!important}
 }
+
+/* Editorial Pearl v11 — graphic from user-approved Lune_X mockup */
+body.home-page .hero .stage{
+ background:#f9e1f0 url("../images/lunex-hero-headphones.avif") center center / cover no-repeat!important;
+ border-radius:26px!important;
+ box-shadow:0 22px 58px #b9429030!important;
+ overflow:hidden!important;
+ width:100%;max-width:560px;min-height:310px;aspect-ratio:586/299;
+ transform:none!important;isolation:isolate;
+}
+body.home-page .hero .stage:before,
+body.home-page .hero .stage .record,
+body.home-page .hero .stage .record-label,
+body.home-page .hero .stage .tonearm,
+body.home-page .hero .stage .onair,
+body.home-page .hero .stage .wave,
+body.home-page .hero .stage .headphone-illustration,
+body.home-page .hero .stage .stage-caption{display:none!important}
+@media(max-width:900px){body.home-page .hero .stage{max-width:610px;min-height:0}}
+@media(max-width:680px){body.home-page .hero .stage{max-width:100%;min-height:0;aspect-ratio:586/299;background-position:center center!important}}
