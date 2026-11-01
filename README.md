@@ -22,7 +22,7 @@ Le 10 uscite e le 99 tracce sono derivate dalle schermate DistroKid fornite dall
 8 uscite hanno link HyperFollow forniti dal progetto. Per `Raíces del Trópico` e `Still Water, Warm Stone` restano da aggiungere link diretti.
 Apple Music è intenzionalmente in primo piano ma il link al momento **apre la ricerca** sul servizio; sostituire con l'URL artista Apple Music definitivo quando verificato.
 I tre brani editoriali rappresentativi (Frattura Notturna, In The Dark We See, Next Stop: Torremolinos) sono descritti con linguaggio narrativo, non analisi sonora certificata.
-Il lettore Spotify usa un iframe ufficiale creato solo dopo clic. Il sito non ospita audio scaricabile e non promette ascolto gratuito integrale.
+Il lettore Spotify usa un iframe ufficiale creato solo dopo clic. Il sito ospita tre anteprime MP3 da 28 secondi dei brani LUNE_X; l'ascolto integrale resta sulle piattaforme musicali collegate.
 
 ## Arte e versione 0.1
 
@@ -44,8 +44,8 @@ Progetto statico senza backend né moduli di raccolta dati. Font Google esterni 
 
 ## Media kit ufficiale — integrazione asset (novembre 2026)
 
-La homepage contiene ora tre mini-player pronti per file MP3 (28 secondi) e tre spazi fotografici dedicati a concept promozionali reali del progetto.
-I player/visual appaiono automaticamente appena questi **sei file binari** vengono caricati nelle cartelle giuste. Lo script verifica che l'asset esista prima di renderlo, quindi nessun pulsante finto o immagine rotta.
+La homepage ospita tre mini-player MP3 (28 secondi) e tre visual WebP di concept promozionali originali del progetto. Tutti e sei i file sono stati caricati il 1° novembre 2026 e risultano presenti nel repository.
+I player/visual si attivano sui browser compatibili dopo verifica HTTP dell'asset. Lo script lascia visibili i messaggi alternativi se la risorsa non può essere caricata.
 
 | Asset | Percorso |
 |---|---|
@@ -58,4 +58,4 @@ I player/visual appaiono automaticamente appena questi **sei file binari** vengo
 
 Gli estratti derivano dai WAV originali forniti dal progetto, con tagli temporali rispettivamente 0:45–1:13, 0:45–1:13, 0:43–1:11, MP3 stereo 160 kbps con fade breve. Non contengono file audio di terzi né autoplay.
 
-I media sono distribuiti come pacchetto ZIP separato, **non presenti nel repository finché non vengono caricati**. La procedura di caricamento è riportata nel pacchetto consegnato alla direzione. Le immagini sono concept promozionali e non attestano campagne pubblicitarie realmente acquistate o supporti fisici in vendita.
+I sei file binari sono presenti in `assets/audio/` e `assets/images/`. I duplicati ZIP del pacchetto di consegna sono stati rimossi dal repository dopo l'estrazione dei file per evitare peso superfluo, restando recuperabili nella cronologia Git. Le immagini sono concept promozionali e non attestano campagne pubblicitarie realmente acquistate o supporti fisici in vendita.

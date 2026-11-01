@@ -1,19 +1,15 @@
 # Anteprime LUNE_X — asset audio originali
 
-Questa cartella ospiterà **solo estratti ufficiali** dei brani LUNE_X. Nessun audio è stato caricato o generato automaticamente.
+Tre estratti ufficiali MP3 caricati il 1° novembre 2026 nel repository.
 
-## File da aggiungere
+| Brano | File | Durata dell'estratto | Intervallo nei WAV originali |
+| --- | --- | --- | --- |
+| Frattura Notturna | `frattura-notturna-preview.mp3` | 28 s | 0:45–1:13 |
+| In The Dark We See | `in-the-dark-we-see-preview.mp3` | 28 s | 0:45–1:13 |
+| Next Stop: Torromolinos I | `next-stop-torremolinos-preview.mp3` | 28 s | 0:43–1:11 |
 
-| Brano | Nome esatto del file |
-| --- | --- |
-| Frattura Notturna | `frattura-notturna-preview.mp3` |
-| In The Dark We See | `in-the-dark-we-see-preview.mp3` |
-| Next Stop: Torremolinos | `next-stop-torremolinos-preview.mp3` |
+Gli estratti sono MP3 stereo con fade di ingresso e uscita. I WAV master rimangono intatti e non sono pubblicati in questa cartella.
 
-**Formato consigliato**: MP3, 20–30 secondi, circa 128–192 kbps stereo, volume corretto, taglio che includa un vero momento significativo della canzone. Lasciare 0,1–0,3 s di fade sui bordi se necessario.
+La homepage verifica via HTTP HEAD la presenza e il tipo del file prima di mostrare il player HTML5. Non è previsto autoplay; quando si avvia un estratto, gli altri player locali vanno in pausa. L'ascolto integrale è disponibile tramite le piattaforme musicali ufficiali linkate sul sito.
 
-La homepage controlla automaticamente la presenza dei file (richiesta HTTP HEAD locale); solo se un MP3 risulta disponibile mostra il riproduttore HTML5. Nessun brano viene riprodotto automaticamente. Quando parte una preview, eventuali altre preview locali vengono messe in pausa.
-
-I brani devono essere quelli del progetto, pubblicabili sul sito secondo i diritti e i termini applicabili. Evitare estratti non autorizzati o riproduzioni automatiche dei servizi commerciali.
-
-**I file audio non sono inclusi in questo commit.** Caricarli direttamente su GitHub, senza modificare codice, nella cartella `assets/audio/` con i nomi sopra, e attendere il deployment.
+I file sono materiale editoriale LUNE_X: eventuali modifiche e distribuzioni devono rispettare i diritti e i termini applicabili.

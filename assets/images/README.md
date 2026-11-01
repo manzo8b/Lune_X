@@ -1,11 +1,11 @@
 # Visual promozionali LUNE_X
 
-Questa cartella è riservata ai tre visual consegnati dalla direzione artistica e convertiti in WebP per il sito.
+Tre visual originali del progetto, pubblicati in formato WebP ottimizzato il 1° novembre 2026:
 
-Caricare i seguenti file (con nomi esatti):
+- `eclipse-dual-billboard.webp`: concept di cartellone Eclipse Dual
+- `dark-desire-cassette.webp`: mockup della cassetta Dark Desire Frequency
+- `welcome-to-paradise-promo.webp`: visual promozionale Welcome to the Paradise
 
-- `eclipse-dual-billboard.webp`: mockup Billboard Eclipse Dual
-- `dark-desire-cassette.webp`: mockup Musicassetta Dark Desire Frequency
-- `welcome-to-paradise-promo.webp`: poster Welcome to the Paradise
+La homepage li carica automaticamente quando le risorse sono raggiungibili. In caso di errore rimangono i segnaposto grafici.
 
-Il sito carica automaticamente le fotografie quando sono disponibili. Fino al caricamento mostra eleganti segnaposto. Non presentare i mockup come pubblicità realmente commissionate o beni fisici in vendita.
+**Trasparenza:** i mockup non rappresentano campagne pubblicitarie realmente commissionate né prodotti fisici in vendita.
