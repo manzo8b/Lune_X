@@ -711,3 +711,10 @@ body.home-page .hero .stage .headphone-illustration,
 body.home-page .hero .stage .stage-caption{display:none!important}
 @media(max-width:900px){body.home-page .hero .stage{max-width:610px;min-height:0}}
 @media(max-width:680px){body.home-page .hero .stage{max-width:100%;min-height:0;aspect-ratio:586/299;background-position:center center!important}}
+
+/* Search-friendly navigation to genuine, indexable dedicated pages */
+body.home-page .seo-discovery{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 17px;padding:22px 14px;margin:20px auto 18px;border-top:1px solid #ecdce5;border-bottom:1px solid #ecdce5;max-width:1000px}
+body.home-page .seo-discovery strong{font-size:13px;color:#6d4960;white-space:nowrap}
+body.home-page .seo-discovery a{display:inline-flex;padding:7px 11px;border-radius:18px;background:#fffafc;border:1px solid #ebd6e2;color:#a21e68;font-size:12px;font-weight:800;text-decoration:none}
+body.home-page .seo-discovery a:hover{text-decoration:underline;background:#fce6f2}
+@media(max-width:620px){body.home-page .seo-discovery{justify-content:flex-start;gap:8px;padding:18px 0}body.home-page .seo-discovery strong{flex:0 0 100%}}
