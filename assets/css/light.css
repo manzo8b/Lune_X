@@ -1,0 +1,115 @@
+/* LUNE_X · Pearl Record Studio / Light Edition v2
+ * Loaded after the original layout rules. Universal visual theme;
+ * analog vinyl details retain their dark color locally, not as page background.
+ */
+:root{color-scheme:light;--bg:#f7f4ef;--black:#222026;--panel:#ffffff;--line:#e4deda;--red:#d72b39;--cream:#231e23;--muted:#675e64;--gold:#ca9978}
+html,body.home-page,body.press-page{background:#f7f4ef;color:#272228}
+body.home-page{background-image:radial-gradient(circle at 95% 9%,#f3dfd9 0,transparent 24%),radial-gradient(circle at 2% 38%,#efe6dd 0,transparent 32%);background-repeat:no-repeat}
+body.home-page header{background:#fbfaf7ed;border-bottom:1px solid #e4dcd5;box-shadow:0 3px 22px #563c3612}
+body.home-page .logo{color:#241d22}body.home-page .logo b{color:#d72b39}
+body.home-page .navlinks a{color:#4e4045}
+body.home-page .navlinks a:hover{color:#c12432}
+body.home-page .navlinks .navlisten{color:#b4212e!important;border-color:#c32a37!important}
+body.home-page .hero{background:radial-gradient(circle at 92% 27%,#f2ccc1 0,transparent 36%),radial-gradient(circle at 5% 87%,#efdfd3 0,transparent 38%),#f7f4ee;border-bottom:1px solid #e2d8d0}
+body.home-page .hero:before{background:repeating-radial-gradient(circle at 86% 48%,transparent 0 21px,#b7867d0a 21px 22px);z-index:0}
+body.home-page .hero-grid{position:relative;z-index:1}
+body.home-page .hero h1{color:#211d22}
+body.home-page .hero .lead{color:#29242a;font-weight:600}
+body.home-page .hero .sublead{color:#554d52;font-size:17px}
+body.home-page .eyebrow{color:#bd2636}
+body.home-page .cta{color:#aa1c2c;border-color:#c7979c;background:#fffaf7}
+body.home-page .cta:hover{background:#f6e1df;transform:translateY(-2px)}
+body.home-page .cta.primary{background:#d32939;color:#fff;border-color:#d32939;box-shadow:0 8px 18px #d3293920}
+body.home-page .cta.primary:hover{background:#b91d2d;color:#fff}
+body.home-page .smallprint{color:#7e6d71}
+body.home-page .stamp{color:#746a70;border-bottom-color:#ddd1cd}
+body.home-page .stamp strong{color:#be2634}
+body.home-page .section-head h2,body.home-page .endcap h2{color:#211b21}
+body.home-page .section-head p{color:#61575e;font-size:15px}
+body.home-page .accent{color:#ca2737}
+body.home-page .portals .portal{border-color:#6f5159}
+body.home-page .portal .tag{color:#ffb3b3}
+body.home-page .portal p{color:#e4dfe1}
+body.home-page .portal h3{color:#fff}
+body.home-page .listening{background:linear-gradient(145deg,#fffdf9,#f7eeeb 48%,#f8f5ef);border-color:#e0d2ce}
+body.home-page .streaming{background:#fff;border:1px solid #e6d7d4;box-shadow:0 12px 34px #4a30310e}
+body.home-page .streaming.featured{background:radial-gradient(circle at 100% 0%,#fff0ed,transparent 55%),#fff;border:1.5px solid #d32939}
+body.home-page .streaming .marker{color:#b92537}
+body.home-page .streaming h3{color:#261f24}
+body.home-page .streaming p{color:#65565c;font-size:15px}
+body.home-page .streaming .note{color:#766970}
+body.home-page .streaming .cta{margin-top:12px}
+body.home-page .player{background:#fff;border:1px solid #e5d7d4;box-shadow:0 12px 30px #4535340c}
+body.home-page .player h3{color:#292127}
+body.home-page .player p{color:#665a61}
+body.home-page .player button{background:#282126;color:#fff;border:1px solid #282126;cursor:pointer}
+body.home-page .player button:hover{background:#b92a37;border-color:#b92a37}
+body.home-page .catalog .album{background:#fff;border:1px solid #e7dcd8;box-shadow:0 9px 25px #46352e0a}
+body.home-page .album-detail h3{color:#292127}
+body.home-page .album-type{color:#ad2533}
+body.home-page .album-detail p{color:#665b61}
+body.home-page .album-detail a{color:#ba2837}
+body.home-page .manifesto-section{background:linear-gradient(120deg,#f7eae5 0%,#f3efea 100%);border-block:1px solid #e4d4cf}
+body.home-page .manifesto .quote{color:#262024}
+body.home-page .manifesto p{color:#5e555a}
+body.home-page .manifesto strong{color:#242023}
+body.home-page .manifesto a{color:#9b1e30}
+body.home-page .howto article{background:#fff;border:1px solid #e9ded9;border-left:3px solid #c92a3b;border-radius:3px;box-shadow:0 6px 20px #40332d09}
+body.home-page .howto h3{color:#241f24}
+body.home-page .howto p{color:#645b60}
+body.home-page .howto .number{color:#ac2634}
+body.home-page .endcap{background:radial-gradient(ellipse at 50% 50%,#f7e5df,transparent 70%);border-top:1px solid #e6d7d1}
+body.home-page .endcap p{color:#5a5258}
+body.home-page footer{background:#f3eee9;border-top:1px solid #e2d8d1;color:#625960}
+body.home-page footer .wordmark{color:#2b2529}
+body.home-page footer a{color:#9f2533}
+body.home-page .disclosure{color:#746a6d}
+/* Carefully preserve the iconic dark record within a light composition. */
+body.home-page .stage:before{background:linear-gradient(140deg,#2e2327,#161318 48%,#322028);border-color:#b28383;box-shadow:inset 0 0 65px #0a070a,0 26px 57px #8d5c5738}
+body.home-page .stage-caption{color:#645256}
+body.home-page .wave{opacity:.37}
+/* Listening-first preview grid: elegant record cards, accessible controls */
+body.home-page .preview-section{background:#fcfbf8;border-bottom:1px solid #e2d8d2}
+body.home-page .preview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+body.home-page .preview-card{overflow:hidden;border:1px solid #e6dcd8;border-radius:14px;background:#fff;box-shadow:0 16px 38px #5038310d;display:flex;flex-direction:column;min-width:0}
+body.home-page .preview-art{aspect-ratio:1.35;position:relative;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 50% 50%,#773440,#2c242f 46%,#19171e 85%);isolation:isolate}
+body.home-page .preview-art--dark{background:radial-gradient(circle at 60% 42%,#9d3f65,#302535 42%,#121522)}
+body.home-page .preview-art--torremolinos{background:linear-gradient(140deg,#212239,#cb6460 62%,#e8a66d)}
+body.home-page .preview-art::before{content:"";position:absolute;inset:0;opacity:.43;background:repeating-radial-gradient(circle at 50% 48%,transparent 0 9px,#fff2 10px 11px,transparent 12px 15px)}
+body.home-page .mini-record{position:relative;width:61%;aspect-ratio:1;border-radius:50%;background:repeating-radial-gradient(circle,#171719 0 2px,#272428 3px 4px,#101014 5px 7px);border:5px solid #0f0d10;box-shadow:0 13px 30px #0008,0 0 0 2px #d7c1b886;transform:rotate(-10deg)}
+body.home-page .mini-center{position:absolute;inset:34%;border-radius:50%;background:radial-gradient(circle,#09090b 0 8%,#f6e9e4 9% 12%,#d53240 13%);border:2px solid #d4a3a0}
+body.home-page .preview-art-number{position:absolute;left:17px;top:15px;color:#fff;font-size:11px;letter-spacing:.17em;font-weight:800}
+body.home-page .preview-art-wordmark{position:absolute;bottom:13px;right:18px;color:#fff;font-size:13px;font-weight:900;letter-spacing:.16em}
+body.home-page .preview-content{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:25px 23px 26px}
+body.home-page .preview-tag{margin:0 0 10px;color:#ae2634;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+body.home-page .preview-content h3{font:700 27px/1.15 'Space Grotesk',sans-serif;letter-spacing:-.04em;margin:0 0 9px;color:#282127}
+body.home-page .preview-content>p:not(.preview-tag){font-size:14px;color:#61565e;margin:0 0 17px}
+body.home-page .preview-audio{width:100%;padding:11px 0 14px;border-top:1px solid #ede3e0;margin-top:auto}
+body.home-page .preview-status{font-size:12px;color:#776a6e;margin:0;display:flex;align-items:center;gap:8px}
+body.home-page .preview-status::before{content:"◌";font-size:20px;color:#ad8c8f}
+body.home-page .preview-player{width:100%}body.home-page .preview-player[hidden]{display:none}
+body.home-page .preview-player audio{width:100%;display:block;height:42px;max-width:100%}
+body.home-page .preview-link{color:#b12233;font-weight:800;font-size:13px;text-decoration:underline;text-underline-offset:4px}
+body.home-page .preview-disclaimer{font-size:13px;color:#76676e;margin:23px 0 0;max-width:890px}
+body.home-page .preview-disclaimer a{color:#b12435}
+body.press-page{background:#f7f4ef;color:#292329}
+body.press-page header{background:#fbfaf8;border-bottom:1px solid #e0d3ce}
+body.press-page header strong{color:#292329}
+body.press-page a{color:#ac2635}
+body.press-page nav a:last-child{color:#ad2333;border-color:#d0a2a2}
+body.press-page nav a:last-child:hover{background:#f3e1df}
+body.press-page .eyebrow{color:#b82c37}
+body.press-page .lead{color:#554d54}
+body.press-page .cover{border:1px solid #e5d5d2;box-shadow:0 20px 55px #4b38301b}
+body.press-page h1,body.press-page h2{color:#262026}
+body.press-page hr{border-top-color:#dacdc8}
+body.press-page .row{border-bottom-color:#e5d8d3}
+body.press-page .row span{color:#71636a}
+body.press-page .chips a{border-color:#cbaaac}
+body.press-page .chips a:hover{background:#f0dcda}
+body.press-page .note{background:#fff;border-left-color:#d32839;color:#655961}
+body.press-page footer{background:#f3eee9;border-top-color:#e0d4ce;color:#675b61}
+@media(max-width:940px){body.home-page .preview-grid{gap:12px}body.home-page .preview-content{padding:20px}body.home-page .preview-content h3{font-size:23px}}
+@media(max-width:680px){body.home-page .preview-grid{grid-template-columns:1fr;gap:18px}body.home-page .preview-art{aspect-ratio:1.9}body.home-page .preview-content h3{font-size:25px}body.home-page .stage{min-height:365px}}
+@media(prefers-reduced-motion:reduce){body.home-page .stage .record,body.home-page .stage .record-label{animation:none}}
+@media print{body.home-page,body.press-page{background:#fff;color:#111}body.home-page .cta.primary{color:#111;background:#fff;border-color:#333}body.home-page .stage:before{background:#eee}body.home-page .preview-art{background:#eee}body.home-page .preview-art-wordmark{color:#111}}
