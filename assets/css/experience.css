@@ -114,3 +114,28 @@ body.home-page .lx-reveal{opacity:1;transform:none}
 @media(max-width:900px){body.home-page .hero-grid{grid-template-columns:1fr!important;gap:27px!important;padding-block:58px 48px!important}body.home-page .hero h1{max-width:710px;font-size:clamp(51px,7vw,70px)!important}body.home-page .stage{margin:12px auto 0!important;width:min(100%,660px)}body.home-page .lx-narrative-grid{grid-template-columns:1fr}body.home-page .lx-signature{text-align:left;padding:14px 0 0;border-left:none;border-top:1px solid #fff4}body.home-page .lx-conversion>div{grid-template-columns:1fr}body.home-page .lx-conversion-actions{flex-direction:row;flex-wrap:wrap}}
 @media(max-width:680px){body.home-page .hero-grid{padding:49px 20px 33px!important}body.home-page .hero h1{font-size:clamp(43px,10vw,59px)!important}body.home-page .hero .actions{gap:8px}body.home-page .hero .cta{font-size:12px;padding:10px 16px;min-height:47px}body.home-page .hero .smallprint{font-size:11px}body.home-page .stamp{transform:none;margin-top:18px}body.home-page .lx-narrative{margin-inline:15px;margin-bottom:38px;border-radius:25px;padding:29px 25px}body.home-page .lx-narrative h2{font-size:38px}body.home-page .lx-narrative p{font-size:15px}body.home-page .lx-conversion{margin-inline:14px;margin-bottom:46px}body.home-page .lx-conversion>div{padding:28px 24px;gap:22px}body.home-page .lx-conversion-actions{flex-direction:column}body.home-page .lx-business{margin-inline:15px;border-radius:24px;padding:29px 25px}body.home-page .lx-business-grid{grid-template-columns:1fr;gap:18px}body.home-page .lx-nowplaying{gap:9px;padding:10px}body.home-page .lx-nowplaying a{padding:9px 8px;font-size:10px}body.home-page .lx-nowplaying button{font-size:11px;padding:6px 9px}body.home-page .lx-scrolltop{right:10px;bottom:12px;width:34px;height:34px}}
 @media(prefers-reduced-motion:reduce){body.home-page *,body.home-page *:before,body.home-page *:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}body.home-page .stage{transform:none!important}.lx-motion body.home-page .lx-reveal:not(.lx-seen){opacity:1;transform:none}}
+/* Second pass — sound selector, four-channel social grid, mobile legibility */
+body.home-page .lx-frequency-picker{max-width:1250px;margin:0 auto;padding:10px clamp(22px,5vw,76px) 35px}
+body.home-page .lx-frequency-intro{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:15px;flex-wrap:wrap}
+body.home-page .lx-frequency-intro strong{color:#73345d;font-size:11px;letter-spacing:.17em;text-transform:uppercase}
+body.home-page .lx-frequency-intro span{font-size:12px;color:#866f7c}
+body.home-page .lx-frequency-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+body.home-page .lx-frequency-grid button{display:flex;gap:13px;align-items:center;text-align:left;cursor:pointer;border:1px solid #edd1e1;border-radius:17px;background:linear-gradient(120deg,#fffefd,#fff2f8);padding:17px 18px;min-height:87px;box-shadow:0 9px 26px #bd71a020;color:#361d39;transition:transform .25s var(--lx-ease),border-color .25s,box-shadow .25s}
+body.home-page .lx-frequency-grid button:hover,body.home-page .lx-frequency-grid button:focus-visible{transform:translateY(-4px);border-color:#d975b1;box-shadow:0 15px 33px #9b3b8b30}
+body.home-page .lx-frequency-grid .lx-frequency-index{width:37px;height:37px;flex:0 0 37px;display:grid;place-items:center;background:linear-gradient(140deg,#b7297a,#a24ec1);color:#fff;font-size:13px;font-weight:800;border-radius:13px;box-shadow:0 6px 19px #b01b7e42}
+body.home-page .lx-frequency-grid button:nth-child(2) .lx-frequency-index{background:linear-gradient(140deg,#6545aa,#d862ad)}
+body.home-page .lx-frequency-grid button:nth-child(3) .lx-frequency-index{background:linear-gradient(140deg,#db5597,#df8753)}
+body.home-page .lx-frequency-grid button span:last-child{display:grid;gap:2px}
+body.home-page .lx-frequency-grid strong{font-size:15px;line-height:1.22}
+body.home-page .lx-frequency-grid small{font-size:11px;color:#8e7387;font-weight:600}
+body.home-page .social-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+body.home-page .social-grid .x{background:linear-gradient(115deg,#6d2a65,#3b1d50)!important;color:#fff}
+body.home-page .social-grid .x *{color:#fff!important}
+body.home-page .social-grid .x .social-icon{background:#ffffff2c}
+body.home-page .social-grid .social-link{min-width:0}
+body.home-page .social-grid .social-copy{min-width:0}
+body.home-page .social-grid .social-copy strong{font-size:16px!important}
+body.home-page .social-grid .social-copy span{overflow-wrap:anywhere;font-size:11px!important}
+@media(max-width:1050px){body.home-page .social-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:900px){body.home-page .lx-frequency-picker{padding-inline:28px}body.home-page .lx-frequency-grid button{padding:13px 11px;gap:8px}body.home-page .lx-frequency-grid strong{font-size:13px}}
+@media(max-width:680px){body.home-page .lx-frequency-picker{padding:9px 18px 30px}body.home-page .lx-frequency-grid{grid-template-columns:1fr;gap:10px}body.home-page .lx-frequency-grid button{min-height:65px;gap:15px;padding:12px 14px}body.home-page .lx-frequency-grid strong{font-size:15px}body.home-page .social-grid{grid-template-columns:1fr!important}}
