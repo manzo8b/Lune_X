@@ -2,9 +2,15 @@
 
 Sito statico indipendente di presentazione dell'artista virtuale LUNE_X, gestito nel repository pubblico `manzo8b/Lune_X`.
 
+**Sito pubblico:** https://manzo8b.github.io/Lune_X/
+
+GitHub Pages: deployment automatizzato da `main` tramite GitHub Actions; primo deploy riuscito il 1 novembre 2026 dopo abilitazione Pages.
+
 ## Struttura
 
 - `index.html`: homepage responsive, visual concept radio/vinile, lettore Spotify su consenso esplicito, discografia, collegamenti Apple Music/Spotify/YouTube/HyperFollow, istruzioni d'ascolto per non esperti
+- `press.html`: press kit e biografia ufficiale con metadati e avvertenze
+- `robots.txt` e `sitemap.xml`: indicazioni per indicizzazione
 - `assets/studio-cover.svg`: anteprima grafica originale vettoriale e immagine di condivisione (provvisoria)
 - `assets/favicon.svg`: favicon vettoriale
 - `.github/workflows/pages.yml`: pubblicazione statica su GitHub Pages
