@@ -1,6 +1,6 @@
-# LUNE_X — official artist landing
+# Lune_X — official artist landing
 
-Sito statico indipendente di presentazione dell'artista virtuale LUNE_X, gestito nel repository pubblico `manzo8b/Lune_X`.
+Sito statico indipendente di presentazione dell'artista virtuale Lune_X, gestito nel repository pubblico `manzo8b/Lune_X`.
 
 **Sito pubblico:** https://manzo8b.github.io/Lune_X/
 
@@ -22,7 +22,7 @@ Le 10 uscite e le 99 tracce sono derivate dalle schermate DistroKid fornite dall
 8 uscite hanno link HyperFollow forniti dal progetto. Per `Raíces del Trópico` e `Still Water, Warm Stone` restano da aggiungere link diretti.
 Apple Music è intenzionalmente in primo piano ma il link al momento **apre la ricerca** sul servizio; sostituire con l'URL artista Apple Music definitivo quando verificato.
 I tre brani editoriali rappresentativi (Frattura Notturna, In The Dark We See, Next Stop: Torremolinos) sono descritti con linguaggio narrativo, non analisi sonora certificata.
-Il lettore Spotify usa un iframe ufficiale creato solo dopo clic. Il sito ospita tre anteprime MP3 da 28 secondi dei brani LUNE_X; l'ascolto integrale resta sulle piattaforme musicali collegate.
+Il lettore Spotify usa un iframe ufficiale creato solo dopo clic. Il sito ospita tre anteprime MP3 da 28 secondi dei brani Lune_X; l'ascolto integrale resta sulle piattaforme musicali collegate.
 
 ## Arte e versione 0.1
 
@@ -38,7 +38,7 @@ Il tema di copertina radio/vinile è realizzato completamente in HTML/CSS e SVG 
 
 ## Trasparenza
 
-LUNE_X è un'identità artistica virtuale con direzione creativa umana e produzione assistita da IA. Non si attribuisce un'esistenza fisica al personaggio. Il sito non dichiara statistiche streaming, ricavi, premi o certificazioni non documentati.
+Lune_X è un'identità artistica virtuale con direzione creativa umana e produzione assistita da IA. Non si attribuisce un'esistenza fisica al personaggio. Il sito non dichiara statistiche streaming, ricavi, premi o certificazioni non documentati.
 
 Progetto statico senza backend né moduli di raccolta dati. Font Google esterni e lettore Spotify (solo dopo consenso tramite clic) dipendono dai fornitori.
 
@@ -59,3 +59,9 @@ I tre mini-player si attivano dopo verifica HTTP dell'audio. Le tre immagini pro
 Gli estratti derivano dai WAV originali forniti dal progetto, con tagli temporali rispettivamente 0:45–1:13, 0:45–1:13, 0:43–1:11, MP3 stereo 160 kbps con fade breve. Non contengono file audio di terzi né autoplay.
 
 I sei file binari sono presenti in `assets/audio/` e `assets/images/`. I duplicati ZIP del pacchetto di consegna sono stati rimossi dal repository dopo l'estrazione dei file per evitare peso superfluo, restando recuperabili nella cronologia Git. Le immagini sono concept promozionali e non attestano campagne pubblicitarie realmente acquistate o supporti fisici in vendita.
+
+## Novembre 2026 — identità e diritti
+- Nome ufficiale **Lune_X**; Instagram `@lune_x.it`, TikTok `@lunex.it`, firma promozionale `@Lunex_Xmusic`, `#Lune_X`, `#Lune_xmusic`.
+- Apple Music resta la CTA prioritaria; destinazione provvisoria alla ricerca artista, finché non si dispone del profilo verificato.
+- Artista umano in evidenza: Pier Paolo Piccioni, «Presunte Realtà — Radio Edit». La card prevede l'asset `assets/images/pier-paolo-piccioni-presunte-realta.webp` (da caricare) e usa una grafica di fallback finché assente. L'embed Spotify si attiva solo dopo clic.
+- Nuove pagine `privacy.html` e `legal.html`: dichiarazione Suno Pro, distribuzione DistroKid, distinzione tra diritti commerciali e protezione del copyright; nessun payout di Apple Music dichiarato come verificato.
