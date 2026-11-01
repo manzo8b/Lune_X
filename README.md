@@ -81,3 +81,14 @@ I sei file binari sono presenti in `assets/audio/` e `assets/images/`. I duplica
 - Verificare resa grafica e contrasto su Safari iPhone e desktop, in particolare il menu su larghezze ridotte e la copertina ritagliata dello screenshot Spotify.
 - Quando disponibili, sostituire i segnaposto delle cover del catalogo con artwork ufficiali.
 - Confermare e aggiornare un indirizzo email privacy dedicato e collegare un URL YouTube artista verificato.
+
+## Redesign visivo Pearl Pulse — 1 novembre 2026
+
+- Interfaccia bianco perla con accenti magenta, rosa e viola, adattata dai riferimenti visuali forniti, ma composta da HTML, CSS e componenti accessibili reali.
+- Hero editoriale con giradischi e cuffie decorative; nessun avvio audio automatico.
+- Tre artwork SVG originali: `assets/images/frattura-notturna-art.svg`, `assets/images/in-the-dark-art.svg` e `assets/images/next-stop-torremolinos-art.svg`.
+- L'immagine di Frattura Notturna non utilizza materiale dell'artista umano Pier Paolo Piccioni, che conserva la propria copertina nella sezione ospite.
+- Sezioni anteprime e artista ospite affiancate su desktop e impilate in mobile, con social più visibili.
+- Interfaccia condivisa fra italiano, inglese e spagnolo; audio, album, social, Apple Music e link esterni preservati.
+- Il logo MANZO AI compare solo nei footer, mentre l'identità Lune_X è nell'intestazione e nel vinile.
+- Verifica statica: un H1 per homepage; 3 anteprime MP3, artwork e percorsi esistenti per lingua; deploy riuscito. Test visuale reale desktop/mobile ancora da effettuare.
