@@ -114,14 +114,14 @@ body.press-page footer{background:#f3eee9;border-top-color:#e0d4ce;color:#675b61
 @media(prefers-reduced-motion:reduce){body.home-page .stage .record,body.home-page .stage .record-label{animation:none}}
 @media print{body.home-page,body.press-page{background:#fff;color:#111}body.home-page .cta.primary{color:#111;background:#fff;border-color:#333}body.home-page .stage:before{background:#eee}body.home-page .preview-art{background:#eee}body.home-page .preview-art-wordmark{color:#111}}
 
-/* LUNE_X campaigns — real artwork displayed automatically when uploaded */
+/* LUNE_X campaigns — artwork loaded by native HTML img elements */
 body.home-page .promo-section{background:#f3ede9;border-block:1px solid #e4d9d2}
 body.home-page .promo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start}
 body.home-page .promo-card{min-width:0;background:#fff;border:1px solid #e4d7d2;border-radius:15px;overflow:hidden;box-shadow:0 18px 40px #4e352c0e}
 body.home-page .promo-thumb{width:100%;aspect-ratio:3/4;display:grid;place-items:center;position:relative;overflow:hidden;background:linear-gradient(145deg,#d3a3aa,#5b3e58 38%,#17161f);color:#fff}
 body.home-page .promo-thumb--cassette{background:linear-gradient(145deg,#58565a 0,#17191d 47%,#771e2d 100%)}
 body.home-page .promo-thumb--sunrise{background:linear-gradient(145deg,#3aa5e7,#a3cbe6 49%,#edb279)}
-body.home-page .promo-thumb img{height:100%;width:100%;display:block;object-fit:cover;object-position:50% 47%}
+body.home-page .promo-thumb img{position:absolute;inset:0;height:100%;width:100%;display:block;object-fit:cover;object-position:50% 47%}
 body.home-page .promo-thumb .promo-placeholder{font:800 clamp(22px,3vw,39px)/1.1 'Space Grotesk',sans-serif;letter-spacing:.12em;text-align:center;padding:25px}
 body.home-page .promo-thumb .promo-placeholder small{display:block;font:700 11px/1.5 'DM Sans',sans-serif;letter-spacing:.12em;margin-top:15px;text-transform:uppercase}
 body.home-page .promo-description{padding:24px}

@@ -45,7 +45,7 @@ Progetto statico senza backend né moduli di raccolta dati. Font Google esterni 
 ## Media kit ufficiale — integrazione asset (novembre 2026)
 
 La homepage ospita tre mini-player MP3 (28 secondi) e tre visual WebP di concept promozionali originali del progetto. Tutti e sei i file sono stati caricati il 1° novembre 2026 e risultano presenti nel repository.
-I player/visual si attivano sui browser compatibili dopo verifica HTTP dell'asset. Lo script lascia visibili i messaggi alternativi se la risorsa non può essere caricata.
+I tre mini-player si attivano dopo verifica HTTP dell'audio. Le tre immagini promozionali sono presenti direttamente nel markup HTML con tag `<img loading="lazy">`: il browser le carica nativamente senza richiesta HEAD o JavaScript, mantenendo il testo alternativo in caso di errore.
 
 | Asset | Percorso |
 |---|---|
