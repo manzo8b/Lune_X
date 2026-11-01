@@ -20,7 +20,7 @@ GitHub Pages: deployment automatizzato da `main` tramite GitHub Actions; primo d
 
 Le 10 uscite e le 99 tracce sono derivate dalle schermate DistroKid fornite dalla direzione creativa, non da analytics di ascolto.
 8 uscite hanno link HyperFollow forniti dal progetto. Per `Raíces del Trópico` e `Still Water, Warm Stone` restano da aggiungere link diretti.
-Apple Music è intenzionalmente in primo piano ma il link al momento **apre la ricerca** sul servizio; sostituire con l'URL artista Apple Music definitivo quando verificato.
+Apple Music è in primo piano e ora collega al profilo artista diretto fornito dalla direzione: https://music.apple.com/it/artist/lune-x/6776382449.
 I tre brani editoriali rappresentativi (Frattura Notturna, In The Dark We See, Next Stop: Torremolinos) sono descritti con linguaggio narrativo, non analisi sonora certificata.
 Il lettore Spotify usa un iframe ufficiale creato solo dopo clic. Il sito ospita tre anteprime MP3 da 28 secondi dei brani Lune_X; l'ascolto integrale resta sulle piattaforme musicali collegate.
 
@@ -31,7 +31,7 @@ Il tema di copertina radio/vinile è realizzato completamente in HTML/CSS e SVG 
 ## Prossimi passi
 
 1. Caricare la grafica radio/vinile approvata e le cover quadrate degli album, in formati ottimizzati e con testo alternativo.
-2. Recuperare URL verificati per il profilo Apple Music e il canale YouTube ufficiale; sostituire le ricerche generiche.
+2. Recuperare l'URL verificato del canale YouTube ufficiale e sostituire la ricerca generica.
 3. Verificare i tre singoli e collegarli ai player ufficiali oppure a pagine multi-streaming.
 4. Controllare la resa della pagina su Safari desktop e mobile, contrasto e SEO/Search Console.
 5. Collegare il dossier S-COMODO SC015 dopo approvazione editoriale.
@@ -62,6 +62,6 @@ I sei file binari sono presenti in `assets/audio/` e `assets/images/`. I duplica
 
 ## Novembre 2026 — identità e diritti
 - Nome ufficiale **Lune_X**; Instagram `@lune_x.it`, TikTok `@lunex.it`, firma promozionale `@Lunex_Xmusic`, `#Lune_X`, `#Lune_xmusic`.
-- Apple Music resta la CTA prioritaria; destinazione provvisoria alla ricerca artista, finché non si dispone del profilo verificato.
-- Artista umano in evidenza: Pier Paolo Piccioni, «Presunte Realtà — Radio Edit». La card prevede l'asset `assets/images/pier-paolo-piccioni-presunte-realta.webp` (da caricare) e usa una grafica di fallback finché assente. L'embed Spotify si attiva solo dopo clic.
+- Apple Music resta la CTA prioritaria e punta al profilo artista ufficiale comunicato dalla direzione.
+- Artista umano in evidenza: Pier Paolo Piccioni, «Presunte Realtà — Radio Edit». La card usa `assets/images/IMG_6911.jpg` caricato dalla direzione, con ritaglio CSS che mostra la copertina senza i controlli Spotify dello screenshot; conserva la grafica di fallback in caso di errore di caricamento. L'embed Spotify si attiva solo dopo clic.
 - Nuove pagine `privacy.html` e `legal.html`: dichiarazione Suno Pro, distribuzione DistroKid, distinzione tra diritti commerciali e protezione del copyright; nessun payout di Apple Music dichiarato come verificato.

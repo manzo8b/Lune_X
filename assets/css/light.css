@@ -160,3 +160,15 @@ body.home-page .social-grid a span{color:#b5263c;font-weight:800;font-size:14px}
 body.home-page .social-tags{margin:25px 0 0;color:#514750;font-size:15px}
 body.home-page .footergrid{flex-wrap:wrap}
 @media(max-width:780px){body.home-page .guest-card{grid-template-columns:1fr}body.home-page .guest-art{min-height:300px;aspect-ratio:1.3}body.home-page .social-grid{grid-template-columns:1fr}body.home-page .social-grid a{padding:19px}}
+
+/* Crop of the GitHub-uploaded original Spotify screenshot: square album cover only.
+   Source IMG_6911.jpg is 828×1411; cover occupies approximately x=48…780, y=143…875. */
+body.home-page .guest-art{aspect-ratio:1;min-height:0}
+body.home-page .guest-art img.guest-source-crop{
+  position:absolute;z-index:2;display:block;inset:auto;
+  width:113.12%;height:auto;max-width:none;left:-6.56%;top:-19.54%;
+  object-fit:initial;object-position:initial;
+}
+@media(max-width:780px){
+  body.home-page .guest-art{aspect-ratio:1;min-height:0}
+}

@@ -9,3 +9,7 @@ Tre visual originali del progetto, pubblicati in formato WebP ottimizzato il 1°
 La homepage presenta i tre WebP direttamente tramite elementi HTML `<img>` con lazy loading nativo: non sono richieste verifiche HTTP HEAD, JavaScript o segnaposto. In caso di mancato caricamento, il browser mostra il testo alternativo.
 
 **Trasparenza:** i mockup non rappresentano campagne pubblicitarie realmente commissionate né prodotti fisici in vendita.
+
+## Artista ospite — Pier Paolo Piccioni
+
+Lo screenshot originale `IMG_6911.jpg` è stato caricato dalla direzione creativa. La card della homepage usa un ritaglio CSS limitato alla copertina quadrata «Presunte Realtà — Radio Edit», senza alterare il file di origine. L'eventuale futuro asset ottimizzato WebP può sostituire il riferimento senza cambiare i link musicali.
