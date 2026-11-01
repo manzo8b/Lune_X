@@ -637,3 +637,57 @@ body.home-page .footergrid{gap:12px}
  body.home-page .preview-content{padding:10px!important}
  body.home-page .preview-content h3{font-size:16px!important}
 }
+
+/* Editorial Pearl v10 — robust proportions and a non-overlapping guest banner */
+body.home-page .guest-section>.wrap{
+ display:block!important;padding:30px!important;max-width:1230px;
+}
+body.home-page .guest-section .guest-card{
+ display:grid!important;grid-template-columns:285px minmax(0,1fr)!important;
+ align-items:center;gap:34px;
+ width:100%;pointer-events:auto!important;
+}
+body.home-page .guest-section .guest-art{
+ grid-column:1!important;grid-row:1!important;
+ width:285px!important;height:285px!important;min-height:0!important;
+ aspect-ratio:1!important;margin:0;overflow:hidden;
+}
+body.home-page .guest-section .guest-copy{
+ grid-column:2!important;grid-row:1!important;
+ padding:0!important;display:block!important;position:relative;
+}
+body.home-page .guest-section .guest-copy .section-head{
+ display:block!important;margin:0 0 13px!important;padding:0;
+}
+body.home-page .guest-section .guest-copy .section-head h2{
+ margin:8px 0 9px!important;font-size:clamp(25px,2.7vw,35px)!important;
+}
+body.home-page .guest-section .guest-copy .section-head p{
+ font-size:13px!important;margin:0;color:#665267;max-width:60ch;
+}
+body.home-page .guest-section .guest-kicker{font-size:10px;letter-spacing:.14em}
+body.home-page .guest-section .guest-copy h3{font-size:clamp(26px,3vw,38px);margin:5px 0}
+body.home-page .preview-card{align-items:center!important}
+body.home-page .preview-art{
+ height:auto!important;min-height:0!important;aspect-ratio:1!important;
+ align-self:center!important;
+}
+body.home-page .preview-art img.preview-cover{
+ width:100%!important;height:100%!important;object-fit:contain!important;
+}
+body.home-page .preview-art .preview-art-wordmark,
+body.home-page .preview-art .preview-art-number{display:none!important}
+body.home-page .preview-section .preview-card{min-height:175px!important}
+body.home-page .preview-section .preview-content{min-height:175px!important}
+@media(max-width:900px){
+ body.home-page .guest-section .guest-card{grid-template-columns:240px minmax(0,1fr)!important;gap:23px}
+ body.home-page .guest-section .guest-art{width:240px!important;height:240px!important}
+}
+@media(max-width:680px){
+ body.home-page .guest-section>.wrap{padding:21px!important}
+ body.home-page .guest-section .guest-card{display:flex!important;flex-direction:column;align-items:stretch;gap:15px}
+ body.home-page .guest-section .guest-art{width:min(100%,320px)!important;height:auto!important;aspect-ratio:1!important;margin:0 auto}
+ body.home-page .guest-section .guest-copy{padding:0!important}
+ body.home-page .preview-section .preview-card{min-height:132px!important}
+ body.home-page .preview-section .preview-content{min-height:132px!important}
+}
