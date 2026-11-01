@@ -65,3 +65,19 @@ I sei file binari sono presenti in `assets/audio/` e `assets/images/`. I duplica
 - Apple Music resta la CTA prioritaria e punta al profilo artista ufficiale comunicato dalla direzione.
 - Artista umano in evidenza: Pier Paolo Piccioni, «Presunte Realtà — Radio Edit». La card usa `assets/images/IMG_6911.jpg` caricato dalla direzione, con ritaglio CSS che mostra la copertina senza i controlli Spotify dello screenshot; conserva la grafica di fallback in caso di errore di caricamento. L'embed Spotify si attiva solo dopo clic.
 - Nuove pagine `privacy.html` e `legal.html`: dichiarazione Suno Pro, distribuzione DistroKid, distinzione tra diritti commerciali e protezione del copyright; nessun payout di Apple Music dichiarato come verificato.
+
+## Versione internazionale e branding (1 novembre 2026)
+
+- Sito trilingue con homepage, press kit, Privacy e Note legali nelle tre versioni: italiano `/`, inglese `/en/`, spagnolo `/es/`.
+- Cambio lingua nelle homepage e nelle pagine informative; URL distinti, canonical e hreflang per ogni lingua; sitemap composta da 12 URL.
+- Le traduzioni mantengono i collegamenti ufficiali Apple Music e Spotify, i tre estratti audio, i tre WebP e il visual dell'artista ospite.
+- Frase editoriale italiana approvata per l'artista ospite: «Questo mese vi proponiamo l’ascolto di un artista umano, scelto per condividere con voi una voce diversa, autentica e personale.»
+- Icone social inline SVG e colori per Instagram, TikTok e Apple Music.
+- Gerarchia di marca: **Lune_X nell'intestazione e sul giradischi; MANZO AI soltanto nel footer**. Il footer richiama l'ecosistema MANZO AI usando la sua emblematica geometrica presente in `manzo-ai/theme/manzo-mark.svg`.
+- L'immagine e la musica di Pier Paolo Piccioni restano una segnalazione editoriale e non dichiarano una partnership.
+
+### Verifiche successive
+
+- Verificare resa grafica e contrasto su Safari iPhone e desktop, in particolare il menu su larghezze ridotte e la copertina ritagliata dello screenshot Spotify.
+- Quando disponibili, sostituire i segnaposto delle cover del catalogo con artwork ufficiali.
+- Confermare e aggiornare un indirizzo email privacy dedicato e collegare un URL YouTube artista verificato.
