@@ -1,15 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://manzo8b.github.io/Lune_X/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://manzo8b.github.io/Lune_X/press.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://manzo8b.github.io/Lune_X/privacy.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://manzo8b.github.io/Lune_X/legal.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://manzo8b.github.io/Lune_X/en/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://manzo8b.github.io/Lune_X/en/press.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://manzo8b.github.io/Lune_X/en/privacy.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://manzo8b.github.io/Lune_X/en/legal.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://manzo8b.github.io/Lune_X/es/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://manzo8b.github.io/Lune_X/es/press.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://manzo8b.github.io/Lune_X/es/privacy.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://manzo8b.github.io/Lune_X/es/legal.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/en/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/es/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/music.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/music.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/music.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/music.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/music.html" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/en/music.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/music.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/music.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/music.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/music.html" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/es/music.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/music.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/music.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/music.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/music.html" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/discography.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/discography.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/discography.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/discography.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/discography.html" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/en/discography.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/discography.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/discography.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/discography.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/discography.html" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/es/discography.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/discography.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/discography.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/discography.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/discography.html" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/about.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/about.html" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/en/about.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/about.html" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/es/about.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/about.html" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/press.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/press.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/press.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/press.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/press.html" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/en/press.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/press.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/press.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/press.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/press.html" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/es/press.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/press.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/press.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/press.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/press.html" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/privacy.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/privacy.html" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/en/privacy.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/privacy.html" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/es/privacy.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/privacy.html" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/legal.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/legal.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/legal.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/legal.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/legal.html" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/en/legal.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/legal.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/legal.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/legal.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/legal.html" />
+  </url>
+  <url>
+    <loc>https://manzo8b.github.io/Lune_X/es/legal.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://manzo8b.github.io/Lune_X/legal.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://manzo8b.github.io/Lune_X/en/legal.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://manzo8b.github.io/Lune_X/es/legal.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://manzo8b.github.io/Lune_X/legal.html" />
+  </url>
 </urlset>
