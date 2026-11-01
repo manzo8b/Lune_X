@@ -106,3 +106,16 @@ I sei file binari sono presenti in `assets/audio/` e `assets/images/`. I duplica
 - I tre mini-player usano elementi HTML audio, play/pausa e slider con gestione di metadati, tempo di ascolto e riproduzione esclusiva senza autoplay. Gli MP3 originali nel repo non sono modificati.
 - Tipografia, dimensioni e contenuti sono adattati per desktop, tablet, smartphone e tre lingue; il logo MANZO AI rimane nel footer.
 - Audit del repository: 12 pagine presenti, un H1 per pagina, nessun punto finale nei titoli, tutti i riferimenti ai media risolti.
+
+## Google Search Console — SEO e sitelink (1 novembre 2026)
+
+- Sitemap XML ufficiale `https://manzo8b.github.io/Lune_X/sitemap.xml`: 21 URL canonici, 7 tipologie di pagina × 3 lingue (IT, EN, ES).
+- Versioni di lingua indicate con `xhtml:link` reciproci `hreflang=it,en,es,x-default`, nel medesimo file sitemap, con `lastmod` coerente con le modifiche sostanziali del 1 novembre 2026.
+- `priority` e `changefreq` rimossi: Google li ignora.
+- Aggiunte 9 pagine autonome in tre lingue: `music.html`, `discography.html`, `about.html`; hanno titoli dedicati, contenuti effettivi e link interni. La homepage rimanda alle nuove pagine dall'intestazione e dal footer.
+- Homepage arricchita da dati strutturati JSON-LD `WebSite` e `MusicGroup`; pagine autonome con `BreadcrumbList` e `WebPage`.
+- I sitelink sono generati automaticamente da Google e NON esiste un file o schema che ne garantisca la comparsa.
+- Attenzione: GitHub Pages di progetto si trova in un percorso `/Lune_X/` del dominio condiviso `manzo8b.github.io`. Il file `/Lune_X/robots.txt` non è il robots.txt di radice del dominio; la sitemap va inviata direttamente dalla proprietà Search Console verificata. Il file nel progetto contiene comunque il riferimento alla sitemap per consultazione.
+- La funzione di riconoscimento del nome sito di Google è gestita a livello di dominio, non di sottocartella; la marcatura `WebSite` descrive Lune_X ma non garantisce che Google mostri Lune_X come nome sito nei risultati su `github.io`.
+- Non creare pagine artificiali con poco contenuto allo scopo di forzare i sitelink. Evitare di inserire ancore di pagina come URL separati nella sitemap.
+- Da Search Console → proprietà URL-prefisso idonea → Sitemap → `sitemap.xml` (oppure URL completo se la proprietà ha prefisso più ampio); poi ispezionare la homepage e le tre nuove pagine strategiche.
