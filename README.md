@@ -41,3 +41,21 @@ Il tema di copertina radio/vinile è realizzato completamente in HTML/CSS e SVG 
 LUNE_X è un'identità artistica virtuale con direzione creativa umana e produzione assistita da IA. Non si attribuisce un'esistenza fisica al personaggio. Il sito non dichiara statistiche streaming, ricavi, premi o certificazioni non documentati.
 
 Progetto statico senza backend né moduli di raccolta dati. Font Google esterni e lettore Spotify (solo dopo consenso tramite clic) dipendono dai fornitori.
+
+## Media kit ufficiale — integrazione asset (novembre 2026)
+
+La homepage contiene ora tre mini-player pronti per file MP3 (28 secondi) e tre spazi fotografici dedicati a concept promozionali reali del progetto.
+I player/visual appaiono automaticamente appena questi **sei file binari** vengono caricati nelle cartelle giuste. Lo script verifica che l'asset esista prima di renderlo, quindi nessun pulsante finto o immagine rotta.
+
+| Asset | Percorso |
+|---|---|
+| Frattura Notturna | `assets/audio/frattura-notturna-preview.mp3` |
+| In The Dark We See | `assets/audio/in-the-dark-we-see-preview.mp3` |
+| Next Stop: Torromolinos I | `assets/audio/next-stop-torremolinos-preview.mp3` |
+| Eclipse Dual (mockup cartellone) | `assets/images/eclipse-dual-billboard.webp` |
+| Dark Desire Frequency (mockup cassetta) | `assets/images/dark-desire-cassette.webp` |
+| Welcome to the Paradise (promo) | `assets/images/welcome-to-paradise-promo.webp` |
+
+Gli estratti derivano dai WAV originali forniti dal progetto, con tagli temporali rispettivamente 0:45–1:13, 0:45–1:13, 0:43–1:11, MP3 stereo 160 kbps con fade breve. Non contengono file audio di terzi né autoplay.
+
+I media sono distribuiti come pacchetto ZIP separato, **non presenti nel repository finché non vengono caricati**. La procedura di caricamento è riportata nel pacchetto consegnato alla direzione. Le immagini sono concept promozionali e non attestano campagne pubblicitarie realmente acquistate o supporti fisici in vendita.
