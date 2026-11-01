@@ -119,3 +119,29 @@ I sei file binari sono presenti in `assets/audio/` e `assets/images/`. I duplica
 - La funzione di riconoscimento del nome sito di Google è gestita a livello di dominio, non di sottocartella; la marcatura `WebSite` descrive Lune_X ma non garantisce che Google mostri Lune_X come nome sito nei risultati su `github.io`.
 - Non creare pagine artificiali con poco contenuto allo scopo di forzare i sitelink. Evitare di inserire ancore di pagina come URL separati nella sitemap.
 - Da Search Console → proprietà URL-prefisso idonea → Sitemap → `sitemap.xml` (oppure URL completo se la proprietà ha prefisso più ampio); poi ispezionare la homepage e le tre nuove pagine strategiche.
+
+## Atelier Frequency — esperienza musicale e percorso commerciale (2 novembre 2026)
+
+Questa revisione riguarda solo Lune_X e mantiene il progetto della Villa All'Ombra dei Pitosfori completamente separato.
+
+### Esperienza visiva
+- I tre homepage IT/EN/ES usano `assets/css/experience.css` (nuovo livello sopra `light.css`) e `assets/js/experience.js` (interazioni progressive).
+- Background sempre chiaro e logo ufficiale Lune_X nell'intestazione. Logo MANZO AI solo nel footer.
+- Effetti: profondità della hero, pannelli editoriali, reveal on scroll, cards hover, progress bar, barra «ora in ascolto», selettore rapido delle tre tracce. `prefers-reduced-motion` rispettato.
+- Nessun autoplay; i file audio restano gli MP3 delle tre anteprime ufficiali nel repository. Nessun tracciamento di eventi o cookies aggiuntivi.
+
+### Storytelling e percorso di conversione
+- Narrazione trasparente del ruolo della direzione creativa umana.
+- CTA per l'ascolto completo sulle pagine ufficiali Apple Music e Spotify; distribuzione DistroKid e link HyperFollow conservati.
+- Nuovo invito alle collaborazioni per visual, locali e contenuti digitali con contatto tramite il profilo Instagram ufficiale e collegamento al press kit.
+- Il sito NON contiene attualmente carrello, checkout, pagamento, raccolta lead o una licenza automatica. Non dichiarare ricavi o acquisti generati senza dati.
+- **Precondizione di qualsiasi proposta di licenza musicale**: verificare per ogni brano i diritti commerciali delle registrazioni, origine del materiale audio, piano Suno alla data di creazione/download e la presenza di eventuali elementi terzi. Il piano a pagamento non assicura da solo protezione copyright in ogni paese.
+- Mantenere separata e indipendente la segnalazione dell'artista ospite umano Pier Paolo Piccioni: la sua opera non è inclusa nei contenuti o nelle offerte Lune_X.
+- La sitemap indica l'ultima modifica sostanziale delle homepage al 2 novembre 2026.
+
+### Controllo qualità minimo prima dei successivi rilasci
+1. Un solo H1 per pagina e nessun punto finale nei titoli
+2. Tutti i file CSS, JS, immagini e MP3 realmente esistenti
+3. Nessuna pubblicazione automatica in Buffer, nessuna modifica agli account della Villa
+4. Verificare manualmente desktop e smartphone, play/pausa/slider, contrasto e responsive
+5. Misurare gli ascolti effettivi solo dai pannelli delle piattaforme musicali; non confondere i click sul sito con stream monetizzabili
