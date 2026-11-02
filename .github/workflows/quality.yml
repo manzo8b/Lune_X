@@ -11,6 +11,9 @@ on:
       - 'qa/**'
       - '.github/workflows/quality.yml'
   workflow_dispatch:
+concurrency:
+  group: lunex-visual-qa
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
