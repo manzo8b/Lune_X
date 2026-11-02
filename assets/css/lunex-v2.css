@@ -283,3 +283,29 @@ body.home-page .lx2-hero-copy{min-width:0!important}
   body.home-page .lx2-hero-layout{display:flex!important;flex-direction:column!important;gap:8px!important}
   body.home-page .lx2-hero-art{mix-blend-mode:multiply!important}
 }
+
+/* Final launch polish: clear spacing for primary/secondary CTAs and brand statements. */
+body.home-page .lx2-hero .lx2-actions,
+body.home-page .lx3-catalog .lx2-actions{
+  display:flex!important;
+  align-items:center!important;
+  flex-wrap:wrap!important;
+  gap:12px!important;
+}
+body.home-page .lx2-marquee .lx2-shell{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  flex-wrap:wrap!important;
+  gap:10px 28px!important;
+  padding-block:12px!important;
+}
+body.home-page .lx2-marquee .lx2-shell span{
+  display:inline-block!important;
+  white-space:normal!important;
+  line-height:1.4!important;
+}
+@media(max-width:620px){
+ body.home-page .lx2-hero .lx2-actions{gap:11px!important}
+ body.home-page .lx2-marquee .lx2-shell{justify-content:flex-start!important;gap:5px 15px!important}
+}
