@@ -1,0 +1,42 @@
+name: LUNE_X — Playwright Visual QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'en/**'
+      - 'es/**'
+      - '*.html'
+      - 'assets/css/lunex-v2.css'
+      - 'qa/**'
+      - '.github/workflows/quality.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  visual-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install free browser test runner
+        run: npm install --prefix qa
+      - name: Install headless Chromium
+        working-directory: qa
+        run: npx playwright install --with-deps chromium
+      - name: Serve GitHub Pages content locally
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/lunex-server.log 2>&1 &
+          sleep 2
+      - name: Verify 24 pages and capture desktop/tablet/mobile
+        run: node qa/smoke.mjs
+      - name: Keep visual test screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lunex-responsive-screenshots
+          path: qa/screenshots/
+          if-no-files-found: warn
