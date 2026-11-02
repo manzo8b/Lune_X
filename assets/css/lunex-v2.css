@@ -248,3 +248,7 @@ body.home-page .lx-site-footer .lx-spotlight-actions a:last-child,body.lx-conten
 body.home-page .lx-site-footer .lx-footer-bottom p,body.lx-content-page .lx-site-footer .lx-footer-bottom p{color:#52525b!important}
 body.home-page .lx-site-footer .lx-footer-brand p,body.lx-content-page .lx-site-footer .lx-footer-brand p{color:#52525b!important}
 body.home-page .lx-site-footer .lx-legal-note,body.lx-content-page .lx-site-footer .lx-legal-note{color:#52525b!important}
+
+/* Keep the keyboard skip link invisible until focused. */
+body.home-page .skip{position:absolute!important;top:-90px!important;left:12px!important;z-index:200!important;padding:10px 14px!important;background:#fff!important;color:#0b0b0c!important;text-decoration:underline!important}
+body.home-page .skip:focus{top:12px!important}
