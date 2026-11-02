@@ -145,3 +145,18 @@ Questa revisione riguarda solo Lune_X e mantiene il progetto della Villa All'Omb
 3. Nessuna pubblicazione automatica in Buffer, nessuna modifica agli account della Villa
 4. Verificare manualmente desktop e smartphone, play/pausa/slider, contrasto e responsive
 5. Misurare gli ascolti effettivi solo dai pannelli delle piattaforme musicali; non confondere i click sul sito con stream monetizzabili
+
+## Lune_X Signature Web Experience — revisione completa 2 novembre 2026
+
+La grafica del sito ufficiale Lune_X adotta un'interfaccia comune alle **24 pagine nelle tre lingue (IT/EN/ES)**.
+
+- CSS condiviso `assets/css/site-chrome.css`: intestazione premium sticky, logo originale, pulsante Apple Music, menu mobile con `details` accessibile, selettore lingue; footer con narrazione Lune_X, social, blocchi Esplora/Ascolta/Collabora, CTA e trasparenza espandibile.
+- CSS `assets/css/collaborations.css` e nuova landing `collaborations.html` in IT/EN/ES. La landing non dichiara licenze automatiche e non prevede checkout o pagamenti.
+- Homepage mantiene artwork, anteprime audio originali, Spotify on demand, artista umano ospite Pier Paolo Piccioni nella propria sezione e design chiaro. Nuovo collegamento commerciale al dossier collaborazioni.
+- Pagine Musica, Discografia, About, Press, Privacy e Legal ora condividono il sistema visivo. Breadcrumb per ogni pagina secondaria.
+- Sitemap aggiornata: 24 URL localizzati; gruppi `hreflang` reciproci IT/EN/ES/x-default, `lastmod=2026-11-02`.
+- Nessun punto finale nei titoli. MANZO AI compare **soltanto nel footer**.
+- Strategia commerciale: conversione verso Apple Music/Spotify per royalties da ascolti reali; proposte di collaborazione tramite Instagram ufficiale, con revisione dei diritti e preventivo prima di qualsiasi accordo. Non dichiarare vendite, utili, licenze concesse o stream non verificati.
+- Non si aggiungono strumenti di tracciamento, moduli dati personali, cookie di profilazione o autoplay.
+- Script riproducibile: `.github/scripts/apply-site-chrome.mjs`; workflow `.github/workflows/site-chrome.yml`.
+- Nota di pubblicazione: i push automatici prodotti da `GITHUB_TOKEN` possono non innescare il workflow Pages; eseguire un push GitHub aggiuntivo con il connettore dopo la generazione delle pagine.
