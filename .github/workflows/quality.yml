@@ -11,8 +11,6 @@ on:
       - 'assets/images/lunex-reference-*.svg'
       - 'qa/**'
       - '.github/workflows/quality.yml'
-  pull_request:
-    branches: [main]
   workflow_dispatch:
 concurrency:
   group: lunex-qa-${{ github.ref }}
