@@ -252,3 +252,14 @@ body.home-page .lx-site-footer .lx-legal-note,body.lx-content-page .lx-site-foot
 /* Keep the keyboard skip link invisible until focused. */
 body.home-page .skip{position:absolute!important;top:-90px!important;left:12px!important;z-index:200!important;padding:10px 14px!important;background:#fff!important;color:#0b0b0c!important;text-decoration:underline!important}
 body.home-page .skip:focus{top:12px!important}
+
+/* Fix real mobile horizontal overflow identified by three-browser QA:
+   intrinsic 640px, 1000px and 1200px <img> dimensions were escaping their cards. */
+body.home-page img,body.lx-content-page img{max-width:100%;height:auto}
+body.home-page .lx2-track-image img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important}
+body.home-page .lx2-feature-media{position:relative!important;overflow:hidden!important;min-width:0!important}
+body.home-page .lx2-feature-media img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important}
+body.home-page .lx2-visuals figure{min-width:0!important}
+body.home-page .lx2-visuals figure img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:4/3!important;object-fit:cover!important}
+body.home-page .lx2-guest img{display:block;max-width:100%;height:auto;object-fit:cover}
+body.home-page .lx2-feature,body.home-page .lx2-visuals,body.home-page .lx2-visuals figure{min-width:0!important;max-width:100%}
