@@ -37,8 +37,8 @@
     const langs=["it","en","es"].map(l=>`<a href="${localHref(lang,l,filename)}" lang="${l}"${l===lang?' aria-current="page"':''}>${l.toUpperCase()}</a>`).join("");
     const home=filename==="index.html"?"./":"./";
     const nav=links.map(([n,label])=>item(n,label)).join("");
-    const menu=`<a href="${home}">${w.home}</a>${links.map(([n,label])=>item(n,label)).join("")}<a href="${spotify}" target="_blank" rel="noopener noreferrer">Spotify ↗</a><a class="lx-mobile-play" href="${apple}" target="_blank" rel="noopener noreferrer">♫ ${w.footerListen} ↗</a>`;
-    return `<header class="lx-site-header" id="lx-site-top"><div class="lx-top-rail"><div class="lx-top-rail-inner"><span>${w.rail}</span><a href="music.html">${w.toplink} ↗</a></div></div><div class="lx-mainbar"><a class="lx-mark" href="${home}" aria-label="Lune_X — ${w.home}"><img src="${assets}images/lunex-logo-header.avif" width="291" height="99" decoding="async" alt="Lune_X"></a><nav class="lx-primary-nav" aria-label="${w.explore} Lune_X">${nav}</nav><div class="lx-header-actions"><a class="lx-listen-cta" href="${apple}" target="_blank" rel="noopener noreferrer">♫ Apple Music ↗</a><nav class="lx-languages" aria-label="Languages">${langs}</nav><details class="lx-mobile-menu"><summary aria-label="${w.menu}"><span aria-hidden="true">☰</span></summary><nav class="lx-mobile-panel" aria-label="${w.explore}">${menu}</nav></details></div></div></header>`;
+    const menu=`<a href="${home}">${w.home}</a>${links.map(([n,label])=>item(n,label)).join("")}<a href="${spotify}" target="_blank" rel="noopener noreferrer">Spotify ↗</a><div class="lx-mobile-languages" aria-label="Languages">${langs}</div><a class="lx-mobile-play" href="${apple}" target="_blank" rel="noopener noreferrer">♫ ${w.footerListen} ↗</a>`;
+    return `<header class="lx-site-header" id="lx-site-top"><div class="lx-top-rail"><div class="lx-top-rail-inner"><span>${w.rail}</span><a href="music.html">${w.toplink} ↗</a></div></div><div class="lx-mainbar"><a class="lx-mark" href="${home}" aria-label="Lune_X — ${w.home}"><img src="${assets}images/lunex-logo-header.avif" width="291" height="99" decoding="async" alt="Lune_X"></a><nav class="lx-primary-nav" aria-label="${w.explore} Lune_X">${nav}</nav><div class="lx-header-actions"><a class="lx-listen-cta" href="${apple}" target="_blank" rel="noopener noreferrer">♫ Apple Music ↗</a><nav class="lx-languages" aria-label="Languages">${langs}</nav><details class="lx-mobile-menu"><summary aria-label="${w.menu}"><span aria-hidden="true">☰</span><span class="lx-menu-text">${lang==="it"?"MENÙ":lang==="es"?"MENÚ":"MENU"}</span></summary><nav class="lx-mobile-panel" aria-label="${w.explore}">${menu}</nav></details></div></div></header>`;
   }
   function footer(lang){
     const w=t[lang],assets=subpath(lang);
@@ -66,7 +66,7 @@
       const startFooter=/<footer\b[^>]*>[\s\S]*?<\/footer>/;
       if(!startHeader.test(html)||!startFooter.test(html))throw Error("Missing header/footer: "+rel);
       html=html.replace(startHeader,header(lang,filename)).replace(startFooter,footer(lang));
-      const newLink=`<link rel="stylesheet" href="${subpath(lang)}css/site-chrome.css?v=1">`;
+      const newLink=`<link rel="stylesheet" href="${subpath(lang)}css/site-chrome.css?v=2">`;
       if(html.includes("site-chrome.css"))html=html.replace(/<link rel="stylesheet" href="(?:\.\.\/)?(?:assets\/)?css\/site-chrome\.css\?v=\d+">/,newLink);else html=html.replace("</head>",newLink+"</head>");
       if(filename!=="index.html"){
         const body=html.match(/<body([^>]*)>/);if(!body)throw Error("No body tag: "+rel);
@@ -88,7 +88,8 @@
       }
       if((html.match(/<header\b/g)||[]).length!==1||(html.match(/<footer\b/g)||[]).length!==1||(html.match(/<h1\b/g)||[]).length!==1)throw Error("Structure mismatch "+rel);
       if(!html.includes("lx-site-header")||!html.includes("lx-site-footer"))throw Error("Template failure "+rel);
-      if(!html.includes('href="'+subpath(lang)+'css/site-chrome.css?v=1"')||!html.includes('src="'+subpath(lang)+'images/lunex-logo-header.avif"'))throw Error("Incorrect brand resource path "+rel);
+      if(!html.includes('class="lx-menu-text"')||!html.includes('class="lx-mobile-languages"'))throw Error("Mobile menu missing "+rel);
+      if(!html.includes('href="'+subpath(lang)+'css/site-chrome.css?v=2"')||!html.includes('src="'+subpath(lang)+'images/lunex-logo-header.avif"'))throw Error("Incorrect brand resource path "+rel);
       html=upgradeSocialMeta(html);
       await fs.writeFile(rel,html);
       targets.push(rel);
@@ -96,7 +97,7 @@
     const collab=(lang==="it"?"":lang+"/")+"collaborations.html";
     let html=collaborations(lang);
     // put global CSS after collab-specific CSS to unify navigation and footer
-    html=html.replace("</head>",`<link rel="stylesheet" href="${subpath(lang)}css/site-chrome.css?v=1"></head>`);
+    html=html.replace("</head>",`<link rel="stylesheet" href="${subpath(lang)}css/site-chrome.css?v=2"></head>`);
     const crumbs=`<nav class="lx-crumbs" aria-label="Breadcrumb"><a href="./">${t[lang].home}</a><span aria-hidden="true">/</span><span>${t[lang].collab}</span></nav>`;
     html=html.replace('<main class="wrap">','<main class="wrap">'+crumbs);
     html=upgradeSocialMeta(html);
