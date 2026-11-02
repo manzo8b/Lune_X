@@ -15,7 +15,7 @@ for(const lang of langs){
  for(const file of pages){
   const html=await readFile(path.join(root,lang,file),'utf8');
   if(!html.includes('assets/css/lunex-v2.css'))problems.push(lang+file+' missing design stylesheet');
-  if((html.match(/<h1\\b/g)||[]).length!==1)problems.push(lang+file+' invalid H1 count');
+  if((html.match(/<h1\b/g)||[]).length!==1)problems.push(lang+file+' invalid H1 count');
   if(!html.includes('rel="canonical"'))problems.push(lang+file+' missing canonical');
   for(const m of html.matchAll(/(?:href|src)="([^"]+)"/g)){
    const raw=m[1];
@@ -58,7 +58,7 @@ for(const [browserName,engine] of Object.entries({chromium,firefox,webkit})){
     if(measured.documentWidth>width+2)problems.push(browserName+' '+lang+' '+width+' horizontal overflow '+measured.documentWidth);
     if(measured.headingRight>width+2||measured.headingLeft< -2)problems.push(browserName+' '+lang+' '+width+' heading cropped');
     if(!measured.heroArt?.includes('lunex-reference-hero.svg'))problems.push(browserName+' '+lang+' '+width+' approved logo not displayed');
-    for(const sec of measured.sections)if(/rgb\\(196, 36, 31\\)|rgb\\(16, 16, 16\\)|rgb\\(17, 17, 17\\)/.test(sec.bg||''))problems.push(browserName+' '+lang+' '+width+' dark/red background '+sec.name+':'+sec.bg);
+    for(const sec of measured.sections)if(/rgb\(196, 36, 31\)|rgb\(16, 16, 16\)|rgb\(17, 17, 17\)/.test(sec.bg||''))problems.push(browserName+' '+lang+' '+width+' dark/red background '+sec.name+':'+sec.bg);
     if(width<=1024){
       const trigger=page.locator('.lx-mobile-menu summary');
       if(!(await trigger.isVisible()))problems.push(browserName+' '+lang+' '+width+' mobile menu hidden');
