@@ -26,5 +26,6 @@ jobs:
           git add assets/images/lunex-logo-rbn.avif assets/images/lunex-hero-rbn.avif assets/social/lunex-site-open-graph-rbn-1200.jpg assets/images/eclipse-dual-billboard-rbn.avif assets/images/dark-desire-cassette-rbn.avif assets/images/welcome-to-paradise-promo-rbn.avif
           if ! git diff --cached --quiet; then
             git commit -m "assets: generate red black white Lune_X visual identity"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
