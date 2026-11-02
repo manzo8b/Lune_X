@@ -59,3 +59,17 @@ jobs:
             qa/quality-results.json
             qa/lighthouse-*.json
           if-no-files-found: warn
+
+      - name: Archive branch preview source for offline visual inspection
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lunex-preview-source
+          path: |
+            assets/
+            index.html
+            404.html
+            *.html
+            en/
+            es/
+          if-no-files-found: warn
