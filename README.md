@@ -176,3 +176,11 @@ Questo commit manuale serve inoltre a far avviare a GitHub Pages un deployment s
 L'immagine è una grafica promozionale generata dalle risorse Lune_X, non la copertina dell'artista ospite e non rappresenta statistiche o riconoscimenti. È costruita dallo script `.github/scripts/build-social-assets.mjs`.
 
 L'ultimo commit manuale richiama la pubblicazione GitHub Pages dopo i commit automatizzati dei sorgenti e dell'immagine.
+
+### Correzione menu mobile — 2 novembre 2026
+
+- Causa: intestazione troppo affollata sulle larghezze da smartphone, con Apple Music, IT/EN/ES e logo sulla stessa riga; il pulsante del menu finiva oltre il viewport e poteva risultare invisibile.
+- Soluzione: su telefoni stretti compaiono logo Lune_X + pulsante etichettato `MENÙ`, `MENU` o `MENÚ` in base alla lingua. Il link Apple Music e il selettore IT/EN/ES sono nel menu aperto, insieme a tutte le pagine e Spotify.
+- Menu nativo `details/summary`, accessibile anche da tastiera e senza JavaScript; pannello scrollabile e dimensionato entro lo schermo. Le regole CSS forzano la visibilità del pulsante e nascondono il pannello quando è chiuso.
+- Il controllo è applicato a tutte le 24 pagine in IT/EN/ES, con cache-busting `site-chrome.css?v=2`.
+- Le bozze Buffer e gli account della Villa non sono stati modificati.
