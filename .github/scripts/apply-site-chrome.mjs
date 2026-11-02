@@ -21,7 +21,37 @@
   const subpath=lang=>lang==="it"?"assets/":"../assets/";
   const htmlesc=s=>String(s).replaceAll("&","&amp;").replaceAll('"',"&quot;").replaceAll("<","&lt;").replaceAll(">","&gt;");
 
-  const brandOgImage=base+"assets/social/lunex-site-open-graph-1200.jpg";
+  const brandOgImage=base+"assets/social/lunex-site-open-graph-rbn-1200.jpg";
+  // Legacy page-level style blocks need the same chromatic discipline as shared styles.
+  // Only CSS color values are changed, never titles, lyrics, music credits or URLs.
+  function cleanInlinePalette(document){
+    const col=(r,g,b)=>{
+      const lum=.2126*r+.7152*g+.0722*b,hi=Math.max(r,g,b),lo=Math.min(r,g,b);
+      if((r===g&&g===b)||(r===215&&g===25&&b===32)||(r===165&&g===15&&b===21))return [r,g,b];
+      const sat=(hi-lo)/Math.max(1,hi);
+      if(lum>=245)return [255,255,255];
+      if(lum>=228)return [250,250,250];
+      if(lum>=209)return [247,247,247];
+      if(lum>=185)return [238,238,238];
+      if(lum>=159)return [229,229,229];
+      if(lum>=132)return sat>=.24?[215,25,32]:[194,194,194];
+      if(lum>=98)return sat>=.20?[215,25,32]:[133,133,133];
+      if(lum>=67)return sat>=.17?[165,15,21]:[75,75,75];
+      if(lum>=41)return [43,43,43];
+      return [17,17,17];
+    };
+    const hex=v=>Math.round(v).toString(16).padStart(2,"0");
+    const recolor=css=>css.replace(/#(?:[0-9a-fA-F]{8}|[0-9a-fA-F]{6}|[0-9a-fA-F]{4}|[0-9a-fA-F]{3})(?![0-9a-fA-F])/g,m=>{
+      let value=m.slice(1);
+      if(value.length===3||value.length===4)value=[...value].map(x=>x+x).join("");
+      const c=col(parseInt(value.slice(0,2),16),parseInt(value.slice(2,4),16),parseInt(value.slice(4,6),16));
+      return "#"+c.map(hex).join("")+(value.length===8?value.slice(6):"");
+    });
+    document=document.replace(/<style\\b[^>]*>[\\s\\S]*?<\\/style>/gi,part=>recolor(part));
+    document=document.replace(/style="[^"]*"/gi,part=>recolor(part));
+    document=document.replace(/<meta name="theme-color" content="[^"]*">/g,'<meta name="theme-color" content="#ffffff">');
+    return document;
+  }
   function upgradeSocialMeta(doc){
     const og='<meta property="og:image" content="'+brandOgImage+'">';
     if(/<meta\s+property="og:image"\s+content="[^"]*"\s*\/?>/.test(doc))doc=doc.replace(/<meta\s+property="og:image"\s+content="[^"]*"\s*\/?>/g,og);
@@ -38,13 +68,13 @@
     const home=filename==="index.html"?"./":"./";
     const nav=links.map(([n,label])=>item(n,label)).join("");
     const menu=`<a href="${home}">${w.home}</a>${links.map(([n,label])=>item(n,label)).join("")}<a href="${spotify}" target="_blank" rel="noopener noreferrer">Spotify ↗</a><div class="lx-mobile-languages" aria-label="Languages">${langs}</div><a class="lx-mobile-play" href="${apple}" target="_blank" rel="noopener noreferrer">♫ ${w.footerListen} ↗</a>`;
-    return `<header class="lx-site-header" id="lx-site-top"><div class="lx-top-rail"><div class="lx-top-rail-inner"><span>${w.rail}</span><a href="music.html">${w.toplink} ↗</a></div></div><div class="lx-mainbar"><a class="lx-mark" href="${home}" aria-label="Lune_X — ${w.home}"><img src="${assets}images/lunex-logo-header.avif" width="291" height="99" decoding="async" alt="Lune_X"></a><nav class="lx-primary-nav" aria-label="${w.explore} Lune_X">${nav}</nav><div class="lx-header-actions"><a class="lx-listen-cta" href="${apple}" target="_blank" rel="noopener noreferrer">♫ Apple Music ↗</a><nav class="lx-languages" aria-label="Languages">${langs}</nav><details class="lx-mobile-menu"><summary aria-label="${w.menu}"><span aria-hidden="true">☰</span><span class="lx-menu-text">${lang==="it"?"MENÙ":lang==="es"?"MENÚ":"MENU"}</span></summary><nav class="lx-mobile-panel" aria-label="${w.explore}">${menu}</nav></details></div></div></header>`;
+    return `<header class="lx-site-header" id="lx-site-top"><div class="lx-top-rail"><div class="lx-top-rail-inner"><span>${w.rail}</span><a href="music.html">${w.toplink} ↗</a></div></div><div class="lx-mainbar"><a class="lx-mark" href="${home}" aria-label="Lune_X — ${w.home}"><img src="${assets}images/lunex-logo-rbn.avif" width="291" height="99" decoding="async" alt="Lune_X"></a><nav class="lx-primary-nav" aria-label="${w.explore} Lune_X">${nav}</nav><div class="lx-header-actions"><a class="lx-listen-cta" href="${apple}" target="_blank" rel="noopener noreferrer">♫ Apple Music ↗</a><nav class="lx-languages" aria-label="Languages">${langs}</nav><details class="lx-mobile-menu"><summary aria-label="${w.menu}"><span aria-hidden="true">☰</span><span class="lx-menu-text">${lang==="it"?"MENÙ":lang==="es"?"MENÚ":"MENU"}</span></summary><nav class="lx-mobile-panel" aria-label="${w.explore}">${menu}</nav></details></div></div></header>`;
   }
   function footer(lang){
     const w=t[lang],assets=subpath(lang);
     const album=["music.html",w.music],disc=["discography.html",w.disc],about=["about.html",w.about],press=["press.html",w.press],collab=["collaborations.html",w.collab];
     const list=items=>items.map(([href,label])=>`<a href="${href}">${label}</a>`).join("");
-    return `<footer class="lx-site-footer"><div class="lx-footer-spotlight"><div class="lx-footer-spotlight-inner"><div><span class="lx-spotlight-kicker">${w.footerKick}</span><h2 class="lx-spotlight-title">${w.footerTitle}</h2><p class="lx-spotlight-description">${w.footerDesc}</p></div><div class="lx-spotlight-actions"><a href="${apple}" target="_blank" rel="noopener noreferrer">♫ ${w.footerListen} ↗</a><a href="collaborations.html">${w.footerCollab} ↗</a></div></div></div><div class="lx-footer-grid"><section class="lx-footer-brand"><a href="./" aria-label="Lune_X — ${w.home}"><img src="${assets}images/lunex-logo-header.avif" width="291" height="99" loading="lazy" alt="Lune_X"></a><p>${w.footerIntro}</p><div class="lx-footer-socials"><a href="${instagram}" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.tiktok.com/@lunex.it" target="_blank" rel="noopener noreferrer">TikTok ↗</a><a href="https://twitter.com/lune_Xit" target="_blank" rel="noopener noreferrer">X ↗</a></div></section><nav class="lx-footer-links" aria-label="${w.explore}"><strong>${w.explore}</strong>${list([album,disc,about,press])}</nav><nav class="lx-footer-links" aria-label="${w.platform}"><strong>${w.platform}</strong><a href="${apple}" target="_blank" rel="noopener noreferrer">Apple Music ↗</a><a href="${spotify}" target="_blank" rel="noopener noreferrer">Spotify ↗</a>${list([album])}</nav><nav class="lx-footer-links" aria-label="${w.business}"><strong>${w.business}</strong>${list([collab,press,["privacy.html",w.privacy],["legal.html",w.legal]])}</nav></div><div class="lx-footer-bottom"><p>© 2026 Lune_X · ${w.brand} · Marcelo Javier Fernandez Caballero</p><a class="lx-footer-manzo" href="https://manzo8b.github.io/manzo-ai/${lang}/" target="_blank" rel="noopener noreferrer" aria-label="MANZO AI"><img src="${assets}images/manzo-ai-footer.webp" loading="lazy" alt="MANZO AI" width="42" height="49"><span>MANZO AI</span></a></div><details class="lx-legal-note"><summary>${w.details}</summary><p>${w.disclosure}</p></details></footer>`;
+    return `<footer class="lx-site-footer"><div class="lx-footer-spotlight"><div class="lx-footer-spotlight-inner"><div><span class="lx-spotlight-kicker">${w.footerKick}</span><h2 class="lx-spotlight-title">${w.footerTitle}</h2><p class="lx-spotlight-description">${w.footerDesc}</p></div><div class="lx-spotlight-actions"><a href="${apple}" target="_blank" rel="noopener noreferrer">♫ ${w.footerListen} ↗</a><a href="collaborations.html">${w.footerCollab} ↗</a></div></div></div><div class="lx-footer-grid"><section class="lx-footer-brand"><a href="./" aria-label="Lune_X — ${w.home}"><img src="${assets}images/lunex-logo-rbn.avif" width="291" height="99" loading="lazy" alt="Lune_X"></a><p>${w.footerIntro}</p><div class="lx-footer-socials"><a href="${instagram}" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.tiktok.com/@lunex.it" target="_blank" rel="noopener noreferrer">TikTok ↗</a><a href="https://twitter.com/lune_Xit" target="_blank" rel="noopener noreferrer">X ↗</a></div></section><nav class="lx-footer-links" aria-label="${w.explore}"><strong>${w.explore}</strong>${list([album,disc,about,press])}</nav><nav class="lx-footer-links" aria-label="${w.platform}"><strong>${w.platform}</strong><a href="${apple}" target="_blank" rel="noopener noreferrer">Apple Music ↗</a><a href="${spotify}" target="_blank" rel="noopener noreferrer">Spotify ↗</a>${list([album])}</nav><nav class="lx-footer-links" aria-label="${w.business}"><strong>${w.business}</strong>${list([collab,press,["privacy.html",w.privacy],["legal.html",w.legal]])}</nav></div><div class="lx-footer-bottom"><p>© 2026 Lune_X · ${w.brand} · Marcelo Javier Fernandez Caballero</p><a class="lx-footer-manzo" href="https://manzo8b.github.io/manzo-ai/${lang}/" target="_blank" rel="noopener noreferrer" aria-label="MANZO AI"><img src="${assets}images/manzo-ai-footer.webp" loading="lazy" alt="MANZO AI" width="42" height="49"><span>MANZO AI</span></a></div><details class="lx-legal-note"><summary>${w.details}</summary><p>${w.disclosure}</p></details></footer>`;
   }
   function collaborations(lang){
     const w=t[lang],dest=base+(lang==="it"?"":lang+"/")+"collaborations.html";
@@ -66,7 +96,7 @@
       const startFooter=/<footer\b[^>]*>[\s\S]*?<\/footer>/;
       if(!startHeader.test(html)||!startFooter.test(html))throw Error("Missing header/footer: "+rel);
       html=html.replace(startHeader,header(lang,filename)).replace(startFooter,footer(lang));
-      const newLink=`<link rel="stylesheet" href="${subpath(lang)}css/site-chrome.css?v=2">`;
+      const newLink=`<link rel="stylesheet" href="${subpath(lang)}css/site-chrome.css?v=3">`;
       if(html.includes("site-chrome.css"))html=html.replace(/<link rel="stylesheet" href="(?:\.\.\/)?(?:assets\/)?css\/site-chrome\.css\?v=\d+">/,newLink);else html=html.replace("</head>",newLink+"</head>");
       if(filename!=="index.html"){
         const body=html.match(/<body([^>]*)>/);if(!body)throw Error("No body tag: "+rel);
@@ -89,7 +119,8 @@
       if((html.match(/<header\b/g)||[]).length!==1||(html.match(/<footer\b/g)||[]).length!==1||(html.match(/<h1\b/g)||[]).length!==1)throw Error("Structure mismatch "+rel);
       if(!html.includes("lx-site-header")||!html.includes("lx-site-footer"))throw Error("Template failure "+rel);
       if(!html.includes('class="lx-menu-text"')||!html.includes('class="lx-mobile-languages"'))throw Error("Mobile menu missing "+rel);
-      if(!html.includes('href="'+subpath(lang)+'css/site-chrome.css?v=2"')||!html.includes('src="'+subpath(lang)+'images/lunex-logo-header.avif"'))throw Error("Incorrect brand resource path "+rel);
+      if(!html.includes('href="'+subpath(lang)+'css/site-chrome.css?v=3"')||!html.includes('src="'+subpath(lang)+'images/lunex-logo-rbn.avif"'))throw Error("Incorrect brand resource path "+rel);
+      html=cleanInlinePalette(html);
       html=upgradeSocialMeta(html);
       await fs.writeFile(rel,html);
       targets.push(rel);
@@ -97,9 +128,10 @@
     const collab=(lang==="it"?"":lang+"/")+"collaborations.html";
     let html=collaborations(lang);
     // put global CSS after collab-specific CSS to unify navigation and footer
-    html=html.replace("</head>",`<link rel="stylesheet" href="${subpath(lang)}css/site-chrome.css?v=2"></head>`);
+    html=html.replace("</head>",`<link rel="stylesheet" href="${subpath(lang)}css/site-chrome.css?v=3"></head>`);
     const crumbs=`<nav class="lx-crumbs" aria-label="Breadcrumb"><a href="./">${t[lang].home}</a><span aria-hidden="true">/</span><span>${t[lang].collab}</span></nav>`;
     html=html.replace('<main class="wrap">','<main class="wrap">'+crumbs);
+    html=cleanInlinePalette(html);
     html=upgradeSocialMeta(html);
     await fs.writeFile(collab,html);
     targets.push(collab);
