@@ -2,6 +2,12 @@
   const fs=await import("node:fs/promises");
   const path=await import("node:path");
   const base="https://manzo8b.github.io/Lune_X/";
+  // Fail fast if the source branch is missing published RGB brand artwork.
+  for(const asset of ["assets/images/lunex-logo-rbn.avif","assets/images/lunex-hero-rbn.avif",
+     "assets/images/eclipse-dual-billboard-rbn.avif","assets/images/dark-desire-cassette-rbn.avif",
+     "assets/images/welcome-to-paradise-promo-rbn.avif","assets/social/lunex-site-open-graph-rbn-1200.jpg"]){
+    await fs.stat(asset);
+  }
   const apple="https://music.apple.com/it/artist/lune-x/6776382449";
   const spotify="https://open.spotify.com/artist/2uPEaolYUj7WisHdewH5vQ";
   const instagram="https://www.instagram.com/lune_x.it/";
