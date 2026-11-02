@@ -1,0 +1,30 @@
+name: Lune_X social campaign artwork
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/scripts/build-social-assets.mjs'
+      - '.github/workflows/social-artworks.yml'
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install image renderer
+        run: npm install --no-save --no-package-lock sharp@0.33.5
+      - name: Build high resolution JPG campaign assets
+        run: node .github/scripts/build-social-assets.mjs
+      - name: Commit public social images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/social/*-social-1080.jpg
+          if ! git diff --cached --quiet; then
+            git commit -m "assets: publish three Lune_X on-brand social visuals"
+            git push
+          fi
