@@ -47,7 +47,7 @@
       const c=col(parseInt(value.slice(0,2),16),parseInt(value.slice(2,4),16),parseInt(value.slice(4,6),16));
       return "#"+c.map(hex).join("")+(value.length===8?value.slice(6):"");
     });
-    document=document.replace(/<style\\b[^>]*>[\\s\\S]*?<\\/style>/gi,part=>recolor(part));
+    document=document.replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi,part=>recolor(part));
     document=document.replace(/style="[^"]*"/gi,part=>recolor(part));
     document=document.replace(/<meta name="theme-color" content="[^"]*">/g,'<meta name="theme-color" content="#ffffff">');
     return document;
