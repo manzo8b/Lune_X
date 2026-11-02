@@ -267,3 +267,19 @@ body.home-page .lx2-feature,body.home-page .lx2-visuals,body.home-page .lx2-visu
 /* Contrast correction from actual Lighthouse accessibility report:
    the active IT/EN/ES desktop link inherited a red fill with dark text. */
 body.home-page .lx-site-header .lx-languages a[aria-current="page"],body.lx-content-page .lx-site-header .lx-languages a[aria-current="page"]{background:#fff!important;color:#0b0b0c!important;border-bottom:2px solid #c4241f!important;border-radius:0!important}
+
+/* Final hero alignment and seamless logo integration */
+@media(min-width:821px){
+  body.home-page .lx2-hero-layout{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;align-items:center!important}
+  body.home-page .lx2-hero-art{align-self:center!important;max-width:100%!important}
+}
+body.home-page .lx2-hero-art{
+  mix-blend-mode:multiply!important;
+  background-color:transparent!important;
+  border:0!important;
+}
+body.home-page .lx2-hero-copy{min-width:0!important}
+@media(max-width:820px){
+  body.home-page .lx2-hero-layout{display:flex!important;flex-direction:column!important;gap:8px!important}
+  body.home-page .lx2-hero-art{mix-blend-mode:multiply!important}
+}
