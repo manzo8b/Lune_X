@@ -51,12 +51,13 @@ for(const [browserName,engine] of Object.entries({chromium,firefox,webkit})){
      const heading=document.querySelector('.lx2-display');
      const r=heading?.getBoundingClientRect();
      const el=document.documentElement;
+     const offenders=[...document.querySelectorAll('body *')].map(el=>({tag:el.tagName,cls:(el.className&&typeof el.className==='string')?el.className.slice(0,70):'',r:el.getBoundingClientRect()})).filter(o=>o.r.right>innerWidth+4||o.r.left< -4).slice(0,12).map(o=>({tag:o.tag,cls:o.cls,left:Math.round(o.r.left),right:Math.round(o.r.right)}));
      const sections=['.lx2-feature','.lx2-statement','.lx2-collab','.lx-site-footer'].map(x=>{
       const e=document.querySelector(x);return {name:x,bg:e?getComputedStyle(e).backgroundColor:null};
      });
-     return {documentWidth:el.scrollWidth,viewport:innerWidth,headingRight:r?.right||0,headingLeft:r?.left||0,header:header?getComputedStyle(header).backgroundColor:null,heroArt:hero?getComputedStyle(hero).backgroundImage:null,sections};
+     return {documentWidth:el.scrollWidth,viewport:innerWidth,headingRight:r?.right||0,headingLeft:r?.left||0,header:header?getComputedStyle(header).backgroundColor:null,heroArt:hero?getComputedStyle(hero).backgroundImage?.slice(0,40):null,offenders,sections};
     });
-    if(measured.documentWidth>width+2)problems.push(browserName+' '+lang+' '+width+' horizontal overflow '+measured.documentWidth);
+    if(measured.documentWidth>width+2)problems.push(browserName+' '+lang+' '+width+' horizontal overflow '+measured.documentWidth+' offenders '+JSON.stringify(measured.offenders));
     if(measured.headingRight>width+2||measured.headingLeft< -2)problems.push(browserName+' '+lang+' '+width+' heading cropped');
     if(!measured.heroArt?.includes('data:image/jpeg;base64'))problems.push(browserName+' '+lang+' '+width+' approved logo not displayed');
     for(const sec of measured.sections)if(/rgb\(196, 36, 31\)|rgb\(16, 16, 16\)|rgb\(17, 17, 17\)/.test(sec.bg||''))problems.push(browserName+' '+lang+' '+width+' dark/red background '+sec.name+':'+sec.bg);
