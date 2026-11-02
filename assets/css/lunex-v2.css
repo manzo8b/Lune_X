@@ -181,3 +181,6 @@ body.lx-content-page main .lx-collab-card{border:1px solid #c9c7c2!important;bor
 body.lx-content-page main .lx-collab-card h2{font-size:clamp(25px,2.7vw,35px)!important}
 body.lx-content-page main .lx-collab-step{border-radius:0!important}
 @media(max-width:760px){body.lx-content-page main .lx-collab-hero{padding:34px 25px!important}body.lx-content-page main .lx-collab-hero h1{font-size:clamp(48px,11vw,74px)!important}body.lx-content-page main .album-grid{grid-template-columns:1fr!important}}
+
+/* The commercial invitation already closes the new homepage: avoid a duplicate footer pitch. */
+body.home-page .lx-site-footer .lx-footer-spotlight{display:none!important}
