@@ -55,11 +55,13 @@ for(const [browserName,engine] of Object.entries({chromium,firefox,webkit})){
      const sections=['.lx2-feature','.lx2-statement','.lx2-collab','.lx-site-footer'].map(x=>{
       const e=document.querySelector(x);return {name:x,bg:e?getComputedStyle(e).backgroundColor:null};
      });
-     return {documentWidth:el.scrollWidth,viewport:innerWidth,headingRight:r?.right||0,headingLeft:r?.left||0,header:header?getComputedStyle(header).backgroundColor:null,heroArt:hero?getComputedStyle(hero).backgroundImage?.slice(0,40):null,offenders,sections};
+     return {documentWidth:el.scrollWidth,viewport:innerWidth,headingRight:r?.right||0,headingLeft:r?.left||0,header:header?getComputedStyle(header).backgroundColor:null,heroArt:hero?getComputedStyle(hero).backgroundImage:null,heroBlend:hero?getComputedStyle(hero).mixBlendMode:null,heroLayout:document.querySelector('.lx2-hero-layout')?getComputedStyle(document.querySelector('.lx2-hero-layout')).display:null,offenders,sections};
     });
     if(measured.documentWidth>width+2)problems.push(browserName+' '+lang+' '+width+' horizontal overflow '+measured.documentWidth+' offenders '+JSON.stringify(measured.offenders));
     if(measured.headingRight>width+2||measured.headingLeft< -2)problems.push(browserName+' '+lang+' '+width+' heading cropped');
-    if(!(measured.heroArt?.includes('data:image/jpeg;base64') || measured.heroArt?.includes('lunex-reference-hero.webp')))problems.push(browserName+' '+lang+' '+width+' approved logo not displayed');
+    if(!measured.heroArt?.includes('lunex-reference-hero.webp'))problems.push(browserName+' '+lang+' '+width+' approved logo background missing');
+    if(width>=1024 && measured.heroLayout!=='grid')problems.push(browserName+' '+lang+' '+width+' desktop hero not two-column');
+    if(measured.heroBlend!=='multiply')problems.push(browserName+' '+lang+' '+width+' logo/background mismatch');
     for(const sec of measured.sections)if(/rgb\(196, 36, 31\)|rgb\(16, 16, 16\)|rgb\(17, 17, 17\)/.test(sec.bg||''))problems.push(browserName+' '+lang+' '+width+' dark/red background '+sec.name+':'+sec.bg);
     if(width<=1024){
       const trigger=page.locator('.lx-mobile-menu summary');
