@@ -168,3 +168,11 @@ Corretto il generatore delle 24 pagine: tutti i percorsi del marchio originale, 
 Il generatore è ora idempotente per i link della sezione collaborazioni, i breadcrumb e il collegamento al CSS condiviso. Workflow di rigenerazione completato con esito positivo.
 
 Questo commit manuale serve inoltre a far avviare a GitHub Pages un deployment sullo stato finale delle pagine, perché un commit automatico via `GITHUB_TOKEN` potrebbe non attivarlo. I 9 post Buffer non sono coinvolti.
+
+### Anteprima social ufficiale — novembre 2026
+
+È disponibile una copertina Open Graph 1200×630 in JPEG: `assets/social/lunex-site-open-graph-1200.jpg`. Le 24 pagine indicizzabili utilizzano questo file nei metadati `og:image` e `twitter:image`, con `twitter:card=summary_large_image`.
+
+L'immagine è una grafica promozionale generata dalle risorse Lune_X, non la copertina dell'artista ospite e non rappresenta statistiche o riconoscimenti. È costruita dallo script `.github/scripts/build-social-assets.mjs`.
+
+L'ultimo commit manuale richiama la pubblicazione GitHub Pages dopo i commit automatizzati dei sorgenti e dell'immagine.
