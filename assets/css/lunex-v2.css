@@ -233,3 +233,18 @@ body.lx-content-page main audio{max-width:100%;width:100%}
  html{scroll-behavior:auto!important}
  body.home-page *,body.lx-content-page *{scroll-behavior:auto!important;animation:none!important;transition:none!important}
 }
+
+/* Override high-specificity rules from the legacy shared footer, while retaining
+   every link and the complete original legal/editorial footer content. */
+body.home-page .lx-site-footer,body.lx-content-page .lx-site-footer{background:#fff!important;color:#0b0b0c!important;border-top:1px solid #dcdce0!important}
+body.home-page .lx-site-footer .lx-footer-spotlight,body.lx-content-page .lx-site-footer .lx-footer-spotlight{background:#f6f6f7!important;border-bottom:1px solid #dcdce0!important}
+body.home-page .lx-site-footer .lx-spotlight-title,body.lx-content-page .lx-site-footer .lx-spotlight-title{color:#0b0b0c!important}
+body.home-page .lx-site-footer .lx-spotlight-description,body.lx-content-page .lx-site-footer .lx-spotlight-description{color:#52525b!important}
+body.home-page .lx-site-footer .lx-footer-links strong,body.lx-content-page .lx-site-footer .lx-footer-links strong{color:#0b0b0c!important}
+body.home-page .lx-site-footer .lx-footer-links a,body.lx-content-page .lx-site-footer .lx-footer-links a{color:#3f3f46!important}
+body.home-page .lx-site-footer .lx-footer-links a:hover,body.lx-content-page .lx-site-footer .lx-footer-links a:hover{color:#c4241f!important}
+body.home-page .lx-site-footer .lx-footer-socials a,body.lx-content-page .lx-site-footer .lx-footer-socials a{background:#fff!important;color:#3f3f46!important;border:1px solid #dcdce0!important}
+body.home-page .lx-site-footer .lx-spotlight-actions a:last-child,body.lx-content-page .lx-site-footer .lx-spotlight-actions a:last-child{background:#fff!important;color:#0b0b0c!important;border:1px solid #0b0b0c!important}
+body.home-page .lx-site-footer .lx-footer-bottom p,body.lx-content-page .lx-site-footer .lx-footer-bottom p{color:#52525b!important}
+body.home-page .lx-site-footer .lx-footer-brand p,body.lx-content-page .lx-site-footer .lx-footer-brand p{color:#52525b!important}
+body.home-page .lx-site-footer .lx-legal-note,body.lx-content-page .lx-site-footer .lx-legal-note{color:#52525b!important}
