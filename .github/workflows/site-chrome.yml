@@ -1,0 +1,28 @@
+name: Lune_X — Unify site navigation and conversions
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/scripts/apply-site-chrome.mjs'
+      - '.github/workflows/site-chrome.yml'
+permissions:
+  contents: write
+jobs:
+  unify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Upgrade all 24 localised pages and sitemap
+        run: node .github/scripts/apply-site-chrome.mjs
+      - name: Publish HTML updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html music.html discography.html about.html collaborations.html press.html legal.html privacy.html en es sitemap.xml
+          if ! git diff --cached --quiet; then
+            git commit -m "design: unify header footer and editorial conversion flows in 24 pages"
+            git push
+          fi
