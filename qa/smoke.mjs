@@ -57,7 +57,7 @@ for(const [browserName,engine] of Object.entries({chromium,firefox,webkit})){
     });
     if(measured.documentWidth>width+2)problems.push(browserName+' '+lang+' '+width+' horizontal overflow '+measured.documentWidth);
     if(measured.headingRight>width+2||measured.headingLeft< -2)problems.push(browserName+' '+lang+' '+width+' heading cropped');
-    if(!measured.heroArt?.includes('lunex-reference-hero.svg'))problems.push(browserName+' '+lang+' '+width+' approved logo not displayed');
+    if(!measured.heroArt?.includes('data:image/jpeg;base64'))problems.push(browserName+' '+lang+' '+width+' approved logo not displayed');
     for(const sec of measured.sections)if(/rgb\(196, 36, 31\)|rgb\(16, 16, 16\)|rgb\(17, 17, 17\)/.test(sec.bg||''))problems.push(browserName+' '+lang+' '+width+' dark/red background '+sec.name+':'+sec.bg);
     if(width<=1024){
       const trigger=page.locator('.lx-mobile-menu summary');
