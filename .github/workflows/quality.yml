@@ -1,45 +1,61 @@
 name: LUNE_X — Playwright Visual QA
 on:
   push:
-    branches: [main]
+    branches: [main, redesign-v2]
     paths:
       - 'index.html'
       - 'en/**'
       - 'es/**'
       - '*.html'
-      - 'assets/css/lunex-v2.css'
+      - 'assets/css/**'
+      - 'assets/images/lunex-reference-*.svg'
       - 'qa/**'
       - '.github/workflows/quality.yml'
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 concurrency:
-  group: lunex-visual-qa
+  group: lunex-qa-${{ github.ref }}
   cancel-in-progress: true
 permissions:
   contents: read
 jobs:
   visual-qa:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Install free browser test runner
+      - name: Install quality test dependencies
         run: npm install --prefix qa
-      - name: Install headless Chromium
+      - name: Install Chromium Firefox and WebKit
         working-directory: qa
-        run: npx playwright install --with-deps chromium
-      - name: Serve GitHub Pages content locally
+        run: npx playwright install --with-deps chromium firefox webkit
+      - name: Serve site locally
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 > /tmp/lunex-server.log 2>&1 &
           sleep 2
-      - name: Verify 24 pages and capture desktop/tablet/mobile
+      - name: Verify 24 pages and 45 browser/viewport combinations
         run: node qa/smoke.mjs
-      - name: Keep visual test screenshots
+      - name: Lighthouse Mobile baseline (informational)
+        if: always()
+        continue-on-error: true
+        working-directory: qa
+        run: npx lighthouse http://127.0.0.1:4173/ --output=json --output-path=lighthouse-mobile.json --chrome-flags="--headless --no-sandbox" --quiet
+      - name: Lighthouse Desktop baseline (informational)
+        if: always()
+        continue-on-error: true
+        working-directory: qa
+        run: npx lighthouse http://127.0.0.1:4173/ --preset=desktop --output=json --output-path=lighthouse-desktop.json --chrome-flags="--headless --no-sandbox" --quiet
+      - name: Archive screenshots and report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: lunex-responsive-screenshots
-          path: qa/screenshots/
+          name: lunex-qa-screenshots-and-reports
+          path: |
+            qa/screenshots/
+            qa/quality-results.json
+            qa/lighthouse-*.json
           if-no-files-found: warn
