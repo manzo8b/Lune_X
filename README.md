@@ -184,3 +184,24 @@ L'ultimo commit manuale richiama la pubblicazione GitHub Pages dopo i commit aut
 - Menu nativo `details/summary`, accessibile anche da tastiera e senza JavaScript; pannello scrollabile e dimensionato entro lo schermo. Le regole CSS forzano la visibilità del pulsante e nascondono il pannello quando è chiuso.
 - Il controllo è applicato a tutte le 24 pagine in IT/EN/ES, con cache-busting `site-chrome.css?v=2`.
 - Le bozze Buffer e gli account della Villa non sono stati modificati.
+
+## Identity Lock — Rosso, Bianco e Nero — 2 novembre 2026
+
+**Sistema cromatico vincolante** per tutte le 24 pagine (IT/EN/ES):
+- Bianco `#FFFFFF` — fondi principali
+- Nero `#111111` — testo, sezioni premium e footer
+- Rosso `#D71920` — CTA, hover, dettagli dinamici, logo
+- Rosso scuro `#A50F15` — link e microtesti su bianco
+- Grigio `#F7F7F7`, `#E5E5E5`, `#2B2B2B` — superfici e testi secondari
+
+I CSS `light.css`, `experience.css`, `site-chrome.css`, `collaborations.css` sono convertiti. `site-chrome.css?v=3` è lo strato di design finale per tutte le pagine.
+
+Nuove risorse original-brand versionate: `assets/images/lunex-logo-rbn.avif`, `assets/images/lunex-hero-rbn.avif` e `assets/social/lunex-site-open-graph-rbn-1200.jpg`. Anche le tre **illustrazioni promozionali decorative** sono esportate in `*-rbn.avif`; l'originale di ciascuna è conservato. Non si alterano le copertine discografiche dei brani né la copertina dell'artista umano ospite.
+
+Il nuovo header ha logo tricolore e menù mobile chiaramente visibile; il footer è nero con link bianchi e accenti rossi e conserva MANZO AI esclusivamente in fondo.
+
+Confronti WCAG calcolati: `#111111` su bianco 18,88:1; `#2B2B2B` su bianco 14,16:1; `#D71920` su bianco 5,19:1; `#A50F15` su bianco 7,84:1. Questi contrasti verificano le combinazioni rappresentative, non costituiscono un audit automatico completo di ogni schermata.
+
+Lo script riproducibile `.github/scripts/apply-site-chrome.mjs` aggiorna le 24 pagine e normalizza gli stili inline del vecchio tema. `.github/scripts/build-brand-artwork.mjs` e workflow omonimo generano immagini brand-safe. Nessun contenuto Buffer o Villa modificato.
+
+Il commit di questa nota avvia il deployment GitHub Pages sullo stato finale generato dal workflow, evitando che l'ultimo push GITHUB_TOKEN rimanga non distribuito.
