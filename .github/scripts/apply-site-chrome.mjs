@@ -120,6 +120,11 @@
       if(!html.includes("lx-site-header")||!html.includes("lx-site-footer"))throw Error("Template failure "+rel);
       if(!html.includes('class="lx-menu-text"')||!html.includes('class="lx-mobile-languages"'))throw Error("Mobile menu missing "+rel);
       if(!html.includes('href="'+subpath(lang)+'css/site-chrome.css?v=3"')||!html.includes('src="'+subpath(lang)+'images/lunex-logo-rbn.avif"'))throw Error("Incorrect brand resource path "+rel);
+      if(filename==="index.html"){
+        for(const original of ["eclipse-dual-billboard","dark-desire-cassette","welcome-to-paradise-promo"]){
+          html=html.replaceAll(original+".webp",original+"-rbn.avif");
+        }
+      }
       html=cleanInlinePalette(html);
       html=upgradeSocialMeta(html);
       await fs.writeFile(rel,html);
