@@ -37,7 +37,8 @@ for(const [browserName,engine] of Object.entries({chromium,firefox,webkit})){
  try{
   for(const lang of langs){
    for(const width of [320,390,768,1024,1440]){
-    const page=await browser.newPage({viewport:{width,height:900},deviceScaleFactor:1,reducedMotion:'reduce'});
+    const context=await browser.newContext({viewport:{width,height:900},deviceScaleFactor:1,reducedMotion:'reduce'});
+    const page=await context.newPage();
     const errors=[];page.on('pageerror',e=>errors.push(e.message));
     const res=await page.goto(base+lang,{waitUntil:'load',timeout:45000});
     if(res?.status()!==200)problems.push(browserName+' '+lang+' '+width+' HTTP '+res?.status());
@@ -62,7 +63,7 @@ for(const [browserName,engine] of Object.entries({chromium,firefox,webkit})){
     if(width<=1024){
       const trigger=page.locator('.lx-mobile-menu summary');
       if(!(await trigger.isVisible()))problems.push(browserName+' '+lang+' '+width+' mobile menu hidden');
-      else{await trigger.click();if(await page.locator('.lx-mobile-menu').getAttribute('open')===null)problems.push(browserName+' '+lang+' '+width+' menu fails to open')}
+      else{await trigger.click();if(await page.locator('.lx-mobile-menu').getAttribute('open')===null)problems.push(browserName+' '+lang+' '+width+' menu fails to open');await trigger.click();}
     }
     if(errors.length)problems.push(browserName+' '+lang+' '+width+' JS errors '+errors.join(' | '));
     if(browserName==='chromium'){
@@ -73,7 +74,7 @@ for(const [browserName,engine] of Object.entries({chromium,firefox,webkit})){
       }
     }
     report.push({browser:browserName,lang:lang||'it',width,...measured,errors:errors.length});
-    await page.close();
+    await page.close();await context.close();
    }
   }
  }finally{await browser.close()}
