@@ -149,3 +149,35 @@ body.lx-content-page main .intro,body.lx-content-page main .lead{font-size:clamp
 .lx2-statement h2>span:nth-child(2){color:#c81022}
 .lx2-collab .lx2-title>span{display:block}
 @media(min-width:761px){.lx2-track{min-height:480px}}
+
+/* Unified interior-page editorial rhythm */
+body.lx-content-page main.wrap{padding-top:clamp(48px,6vw,85px)!important;padding-bottom:110px!important}
+body.lx-content-page main h1{margin-bottom:21px!important}
+body.lx-content-page main .lx-crumbs{font-size:12px!important;text-transform:uppercase;letter-spacing:.07em!important;font-weight:850!important}
+body.lx-content-page main .intro{margin-bottom:37px!important;max-width:780px!important}
+body.lx-content-page main .panel{background:#f4f3f0!important;border:1px solid #cfceca!important;border-top:5px solid #c81022!important;padding:clamp(25px,4vw,45px)!important;margin-block:27px!important}
+body.lx-content-page main .panel h2{font-size:clamp(27px,3vw,41px)!important;line-height:1.12!important}
+body.lx-content-page main .panel-visual,body.lx-content-page main img.cover{max-width:100%!important;width:100%!important;max-height:550px!important;object-fit:cover!important;border-radius:0!important;box-shadow:none!important;margin-block:30px!important}
+body.lx-content-page main .cards{gap:19px!important}
+body.lx-content-page main .cards .card{border:1px solid #c9c7c2!important;background:white!important;overflow:hidden!important}
+body.lx-content-page main .cards .card img{object-fit:cover!important}
+body.lx-content-page main .cards .card-inner{padding:23px!important}
+body.lx-content-page main .cards .card-inner h2{font-size:clamp(24px,2.7vw,35px)!important;letter-spacing:-.04em!important;line-height:1.12!important}
+body.lx-content-page main audio{display:block;max-width:100%;width:100%}
+body.lx-content-page main .album-grid{gap:13px!important}
+body.lx-content-page main .album-grid .album{border:1px solid #ceccc8!important;border-left:5px solid #c81022!important;background:#fff!important;box-shadow:none!important;padding:24px!important;min-height:120px!important;gap:18px!important}
+body.lx-content-page main .album-grid .album strong{font-size:clamp(20px,2.4vw,28px)!important;letter-spacing:-.025em!important;line-height:1.17!important}
+body.lx-content-page main .album-grid .album span{font-size:13px!important;font-weight:700!important;color:#575757!important}
+body.lx-content-page main .album-grid .album a{color:#c81022!important;font-weight:850!important}
+body.lx-content-page main .quicknav{border-top:1px solid #101010!important;padding-top:25px!important;margin-top:50px!important}
+body.lx-content-page main .lx-collab-hero{border-radius:0!important;background:#101010!important;color:white!important;padding:clamp(35px,6vw,75px)!important;border-left:8px solid #c81022!important;box-shadow:none!important;margin-bottom:65px!important}
+body.lx-content-page main .lx-collab-hero h1{font:900 clamp(49px,6.6vw,94px)/.92 Impact,"Arial Narrow",sans-serif!important;color:white!important;text-transform:uppercase!important;letter-spacing:-.03em!important}
+body.lx-content-page main .lx-collab-hero p{font-size:clamp(17px,2vw,21px)!important;line-height:1.48!important;color:#e6e6e6!important;max-width:760px!important}
+body.lx-content-page main .lx-collab-hero .lx-collab-eyebrow{color:#ff8189!important;font-size:13px!important}
+body.lx-content-page main .lx-collab-actions a:first-child{background:#c81022!important;color:white!important;border-radius:0!important}
+body.lx-content-page main .lx-collab-actions a:not(:first-child){border-radius:0!important;color:#101010!important}
+body.lx-content-page main .lx-collab-cards{gap:17px!important}
+body.lx-content-page main .lx-collab-card{border:1px solid #c9c7c2!important;border-top:5px solid #c81022!important;border-radius:0!important;background:#f4f3f0!important;box-shadow:none!important}
+body.lx-content-page main .lx-collab-card h2{font-size:clamp(25px,2.7vw,35px)!important}
+body.lx-content-page main .lx-collab-step{border-radius:0!important}
+@media(max-width:760px){body.lx-content-page main .lx-collab-hero{padding:34px 25px!important}body.lx-content-page main .lx-collab-hero h1{font-size:clamp(48px,11vw,74px)!important}body.lx-content-page main .album-grid{grid-template-columns:1fr!important}}
