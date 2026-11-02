@@ -18,7 +18,7 @@
     if(filename==="index.html")return same?"./":(origin==="it"?(destination+"/"):(destination==="it"?"../":"../"+destination+"/"));
     return same?filename:(origin==="it"?destination+"/"+filename:destination==="it"?"../"+filename:"../"+destination+"/"+filename);
   };
-  const subpath=lang=>lang==="it"?"":"../";
+  const subpath=lang=>lang==="it"?"assets/":"../assets/";
   const htmlesc=s=>String(s).replaceAll("&","&amp;").replaceAll('"',"&quot;").replaceAll("<","&lt;").replaceAll(">","&gt;");
   function header(lang,filename){
     const w=t[lang],assets=subpath(lang);
@@ -57,7 +57,7 @@
       if(!startHeader.test(html)||!startFooter.test(html))throw Error("Missing header/footer: "+rel);
       html=html.replace(startHeader,header(lang,filename)).replace(startFooter,footer(lang));
       const newLink=`<link rel="stylesheet" href="${subpath(lang)}css/site-chrome.css?v=1">`;
-      if(!html.includes("site-chrome.css"))html=html.replace("</head>",newLink+"</head>");
+      if(html.includes("site-chrome.css"))html=html.replace(/<link rel="stylesheet" href="(?:\.\.\/)?(?:assets\/)?css\/site-chrome\.css\?v=\d+">/,newLink);else html=html.replace("</head>",newLink+"</head>");
       if(filename!=="index.html"){
         const body=html.match(/<body([^>]*)>/);if(!body)throw Error("No body tag: "+rel);
         if(!body[0].includes("lx-content-page")){
@@ -66,18 +66,19 @@
         }
         const crumb=`<nav class="lx-crumbs" aria-label="Breadcrumb"><a href="./">${t[lang].home}</a><span aria-hidden="true">/</span><span>${filename==="music.html"?t[lang].music:filename==="discography.html"?t[lang].disc:filename==="about.html"?t[lang].about:filename==="press.html"?t[lang].press:filename==="legal.html"?t[lang].legal:t[lang].privacy}</span></nav>`;
         const p=html.indexOf("<main");if(p<0)throw Error("No main: "+rel);
-        html=html.replace(/<main\b([^>]*)>/,`<main$1>${crumb}`);
+        if(!html.includes('class="lx-crumbs"'))html=html.replace(/<main\b([^>]*)>/,`<main$1>${crumb}`);
       }
       if(filename==="index.html"){
         const phrase=t[lang].miniCollab;
         const marker='<div class="lx-business-cta">';
         if(!html.includes(marker))throw Error("No commercial CTA: "+rel);
-        html=html.replace(marker,marker+`<a href="collaborations.html">${phrase} ↗</a>`);
+        if(!html.includes(phrase))html=html.replace(marker,marker+`<a href="collaborations.html">${phrase} ↗</a>`);
         // Keep all existing 3 MP3 previews and editorial guest content.
         if((html.match(/class="preview-audio compact-preview"/g)||[]).length!==3||!html.includes("IMG_6911.jpg"))throw Error("Preview or guest missing "+rel);
       }
       if((html.match(/<header\b/g)||[]).length!==1||(html.match(/<footer\b/g)||[]).length!==1||(html.match(/<h1\b/g)||[]).length!==1)throw Error("Structure mismatch "+rel);
       if(!html.includes("lx-site-header")||!html.includes("lx-site-footer"))throw Error("Template failure "+rel);
+      if(!html.includes('href="'+subpath(lang)+'css/site-chrome.css?v=1"')||!html.includes('src="'+subpath(lang)+'images/lunex-logo-header.avif"'))throw Error("Incorrect brand resource path "+rel);
       await fs.writeFile(rel,html);
       targets.push(rel);
     }
