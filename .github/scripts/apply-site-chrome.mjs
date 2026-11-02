@@ -20,6 +20,16 @@
   };
   const subpath=lang=>lang==="it"?"assets/":"../assets/";
   const htmlesc=s=>String(s).replaceAll("&","&amp;").replaceAll('"',"&quot;").replaceAll("<","&lt;").replaceAll(">","&gt;");
+
+  const brandOgImage=base+"assets/social/lunex-site-open-graph-1200.jpg";
+  function upgradeSocialMeta(doc){
+    const og='<meta property="og:image" content="'+brandOgImage+'">';
+    if(/<meta\s+property="og:image"\s+content="[^"]*"\s*\/?>/.test(doc))doc=doc.replace(/<meta\s+property="og:image"\s+content="[^"]*"\s*\/?>/g,og);
+    else doc=doc.replace("</head>",og+"</head>");
+    if(!doc.includes('name="twitter:card"'))doc=doc.replace("</head>",'<meta name="twitter:card" content="summary_large_image"></head>');
+    if(!doc.includes('name="twitter:image"'))doc=doc.replace("</head>",'<meta name="twitter:image" content="'+brandOgImage+'"></head>');
+    return doc;
+  }
   function header(lang,filename){
     const w=t[lang],assets=subpath(lang);
     const item=(name,label)=>`<a href="${name}"${name===filename?' aria-current="page"':''}>${label}</a>`;
@@ -79,6 +89,7 @@
       if((html.match(/<header\b/g)||[]).length!==1||(html.match(/<footer\b/g)||[]).length!==1||(html.match(/<h1\b/g)||[]).length!==1)throw Error("Structure mismatch "+rel);
       if(!html.includes("lx-site-header")||!html.includes("lx-site-footer"))throw Error("Template failure "+rel);
       if(!html.includes('href="'+subpath(lang)+'css/site-chrome.css?v=1"')||!html.includes('src="'+subpath(lang)+'images/lunex-logo-header.avif"'))throw Error("Incorrect brand resource path "+rel);
+      html=upgradeSocialMeta(html);
       await fs.writeFile(rel,html);
       targets.push(rel);
     }
@@ -88,6 +99,7 @@
     html=html.replace("</head>",`<link rel="stylesheet" href="${subpath(lang)}css/site-chrome.css?v=1"></head>`);
     const crumbs=`<nav class="lx-crumbs" aria-label="Breadcrumb"><a href="./">${t[lang].home}</a><span aria-hidden="true">/</span><span>${t[lang].collab}</span></nav>`;
     html=html.replace('<main class="wrap">','<main class="wrap">'+crumbs);
+    html=upgradeSocialMeta(html);
     await fs.writeFile(collab,html);
     targets.push(collab);
   }
