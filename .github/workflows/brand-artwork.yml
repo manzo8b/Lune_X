@@ -1,0 +1,30 @@
+name: Lune_X — Red Black White brand artwork
+on:
+  push:
+    paths:
+      - '.github/scripts/build-brand-artwork.mjs'
+      - '.github/workflows/brand-artwork.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install image processor
+        run: npm install --no-save --no-package-lock sharp@0.33.5
+      - name: Build Lune_X brand assets
+        run: node .github/scripts/build-brand-artwork.mjs
+      - name: Commit versioned original-brand assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/images/lunex-logo-rbn.avif assets/images/lunex-hero-rbn.avif assets/social/lunex-site-open-graph-rbn-1200.jpg
+          if ! git diff --cached --quiet; then
+            git commit -m "assets: generate red black white Lune_X visual identity"
+            git push
+          fi
