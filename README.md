@@ -160,3 +160,11 @@ La grafica del sito ufficiale Lune_X adotta un'interfaccia comune alle **24 pagi
 - Non si aggiungono strumenti di tracciamento, moduli dati personali, cookie di profilazione o autoplay.
 - Script riproducibile: `.github/scripts/apply-site-chrome.mjs`; workflow `.github/workflows/site-chrome.yml`.
 - Nota di pubblicazione: i push automatici prodotti da `GITHUB_TOKEN` possono non innescare il workflow Pages; eseguire un push GitHub aggiuntivo con il connettore dopo la generazione delle pagine.
+
+### Verifica finale delle risorse — 2 novembre 2026
+
+Corretto il generatore delle 24 pagine: tutti i percorsi del marchio originale, del logo footer MANZO AI e dei CSS condivisi puntano ora a `assets/` sulle pagine italiane e a `../assets/` sulle pagine EN/ES.
+
+Il generatore è ora idempotente per i link della sezione collaborazioni, i breadcrumb e il collegamento al CSS condiviso. Workflow di rigenerazione completato con esito positivo.
+
+Questo commit manuale serve inoltre a far avviare a GitHub Pages un deployment sullo stato finale delle pagine, perché un commit automatico via `GITHUB_TOKEN` potrebbe non attivarlo. I 9 post Buffer non sono coinvolti.
