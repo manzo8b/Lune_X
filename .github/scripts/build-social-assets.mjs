@@ -32,4 +32,25 @@
     await sharp(Buffer.from(svg)).jpeg({quality:90,mozjpeg:true}).toFile(file);
     console.log(file,(await fs.stat(file)).size);
   }
+
+  // Site-level Open Graph image for reliable social previews (1200 × 630)
+  const heroBuffer=await sharp("assets/images/lunex-hero-headphones.avif").resize({width:550,height:289,fit:"cover"}).png().toBuffer();
+  const heroUri="data:image/png;base64,"+heroBuffer.toString("base64");
+  const og='<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 630" width="1200" height="630">'
+    +'<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#fffefd"/><stop offset=".55" stop-color="#ffeff8"/><stop offset="1" stop-color="#f6d0ec"/></linearGradient><radialGradient id="glow"><stop stop-color="#ed78c4" stop-opacity=".48"/><stop offset="1" stop-color="#ed78c4" stop-opacity="0"/></radialGradient></defs>'
+    +'<rect width="1200" height="630" fill="url(#bg)"/><circle cx="950" cy="265" r="430" fill="url(#glow)"/>'
+    +'<path d="M-30 525Q260 350 570 520T1240 500" fill="none" stroke="#f7a3d4" stroke-width="7" opacity=".62"/>'
+    +'<image xlink:href="'+logoData+'" x="57" y="37" width="320" height="110" preserveAspectRatio="xMinYMid meet"/>'
+    +'<text x="64" y="250" fill="#a32a78" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" letter-spacing="4" font-weight="700">THE MUSIC HAS A STORY</text>'
+    +'<text x="60" y="329" fill="#311838" font-family="DejaVu Sans,Arial,sans-serif" font-size="51" font-weight="800">A HUMAN VISION</text>'
+    +'<text x="60" y="386" fill="#b22676" font-family="DejaVu Sans,Arial,sans-serif" font-size="49" font-weight="800">A NEW FREQUENCY</text>'
+    +'<text x="63" y="442" fill="#674c65" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="600">Virtual artist  ·  Electronic music  ·  Listen now</text>'
+    +'<rect x="60" y="486" width="340" height="66" rx="33" fill="#b42b83"/><text x="101" y="527" fill="#fff" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="800">DISCOVER LUNE_X</text>'
+    +'<rect x="652" y="164" width="496" height="315" rx="36" fill="#bf76aa" opacity=".2"/>'
+    +'<image xlink:href="'+heroUri+'" x="645" y="152" width="496" height="310" preserveAspectRatio="xMidYMid slice"/>'
+    +'<rect x="645" y="152" width="496" height="310" rx="26" fill="none" stroke="#ebb4d7" stroke-width="5"/>'
+    +'</svg>';
+  const ogFile=path.join(outDir,"lunex-site-open-graph-1200.jpg");
+  await sharp(Buffer.from(og)).jpeg({quality:90,mozjpeg:true}).toFile(ogFile);
+  console.log(ogFile,(await fs.stat(ogFile)).size);
 })();
