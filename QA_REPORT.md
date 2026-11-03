@@ -1,5 +1,9 @@
 # Verifica locale — Web Architect v3
 
+## Verifiche automatiche del rilascio — 3 novembre 2026
+
+Esecuzione GitHub Actions 41587000319 conclusa con successo: 24 pagine, 45 combinazioni Chromium/Firefox/WebKit senza problemi segnalati, axe-core senza violazioni nei sei campioni homepage. Lighthouse in CI: performance 92 mobile / 98 desktop, accessibilità 99, best practice 96, SEO 100. Dettagli, commit verificato e limiti in RELEASE_REPORT.md; questo aggiornamento supera le precedenti annotazioni di controlli non ancora eseguiti per il medesimo runtime.
+
 ## Rilascio completo con YouTube — 3 novembre 2026
 
 Tutte le dieci copertine sono integrate; il master locale di Still Water, Warm Stone è stato recuperato e archiviato con gli altri originali. Aggiunta una sezione YouTube nelle tre homepage e dieci link alle playlist ufficiali in ciascuna homepage e pagina Discografia. Playlist verificate nella scheda Uscite del canale @lune_xmusic; riferimenti in assets/data/youtube-albums.json.
