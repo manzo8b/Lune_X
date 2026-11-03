@@ -13,6 +13,7 @@
 - Non modificare palette, identità o struttura delle sezioni senza richiesta. Mantenere fondi chiari e accenti rossi nell'interfaccia.
 - Non ricolorare le immagini per adattarle al rosso del brand. Tutte le copertine conservano i colori originali.
 - Foto e testo affiancati dove previsto; cornici aderenti alle immagini, senza bande vuote o deformazioni.
+- Aggiornamento 3 novembre: favicon con logo Lune_X originale; immagini editoriali quadrate con effetti discreti; pagina Collaborazioni senza fondi neri e con card ampie; il testo Chi è Lune_X deve descrivere l'identità del progetto, distinguendo l'eventuale ospite.
 - Pulsanti moderni con feedback immediato, effetti discreti, focus evidente e rispetto di reduced-motion.
 - Applicare Apple Design e Impeccable come rifinitura conservativa. I soli SKILL.md allegati non installano launcher o librerie.
 - Narrazione originale, evocativa e strutturata. Il template Wix DJ scuro è un riferimento di tono, mai una fonte di testi da copiare.

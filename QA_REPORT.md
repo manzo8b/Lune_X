@@ -1,5 +1,9 @@
 # Verifica locale — Web Architect v3
 
+## Favicon, Progetto e Collaborazioni — aggiornamento successivo
+
+Nuova favicon con logo originale, testo identitario corretto, immagini quadrate e riquadri con effetti; Collaborazioni interamente chiara con card ampie. Verifica locale sulle tre pagine interessate, tre lingue e 320/768/1440 px: 27 combinazioni senza overflow rilevato; rapporto immagini 1:1 e fondo del processo bianco verificati. Asset locali e favicon controllati sulle 24 pagine del bundle; dimensioni PNG e icona Apple verificate. Evidenze locali: qa/local-polish-checks.json.
+
 ## Verifiche automatiche del rilascio — 3 novembre 2026
 
 Esecuzione GitHub Actions 41587000319 conclusa con successo: 24 pagine, 45 combinazioni Chromium/Firefox/WebKit senza problemi segnalati, axe-core senza violazioni nei sei campioni homepage. Lighthouse in CI: performance 92 mobile / 98 desktop, accessibilità 99, best practice 96, SEO 100. Dettagli, commit verificato e limiti in RELEASE_REPORT.md; questo aggiornamento supera le precedenti annotazioni di controlli non ancora eseguiti per il medesimo runtime.
