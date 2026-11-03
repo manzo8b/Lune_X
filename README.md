@@ -1,5 +1,16 @@
 # Lune_X — official artist landing
 
+## Versione completa — 2 novembre 2026
+
+Dieci copertine integrate, originali archiviati in assets/covers/originals, tre lingue e 24 pagine. Rifiniture visive, narrazione, pulsanti e audit conservativo completati. PROJECT_MEMORY.md conserva preferenze, riferimenti e informazioni per proseguire il progetto. Pubblicazione GitHub Pages autorizzata dall’utente; il workflow prepara solo i file runtime in _site, escludendo master e note. Le sezioni seguenti conservano lo storico delle revisioni.
+
+
+## Revisione locale con Web Architect v3
+
+Branch `codex/web-architect-v3`: prompt applicato alla rifinitura del sito, senza pubblicazione. I poster promozionali mantengono i colori originali su richiesta esplicita dell'utente; nessuna ricolorazione automatica in rosso. Consultare `PRODUCT.md`, `DESIGN.md` e `QA_REPORT.md` per lo stato corrente, che aggiorna le note storiche sottostanti.
+
+Anteprima dalla cartella del repository: `python3 -m http.server 4173 --bind 127.0.0.1`, quindi aprire `http://127.0.0.1:4173/`. Non serve installare dipendenze per visitare il sito statico. `WEB_ARCHITECT_PROMPT.md` conserva il prompt utilizzato come riferimento.
+
 Sito statico indipendente di presentazione dell'artista virtuale Lune_X, gestito nel repository pubblico `manzo8b/Lune_X`.
 
 **Sito pubblico:** https://manzo8b.github.io/Lune_X/
