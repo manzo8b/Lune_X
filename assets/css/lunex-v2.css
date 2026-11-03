@@ -268,7 +268,7 @@ body.home-page .lx2-track-image img{display:block!important;width:100%!important
 body.home-page .lx2-feature-media{position:relative!important;overflow:hidden!important;min-width:0!important}
 body.home-page .lx2-feature-media img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:contain!important}
 body.home-page .lx2-visuals figure{min-width:0!important}
-body.home-page .lx2-visuals figure img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:844/1500!important;object-fit:contain!important}
+body.home-page .lx2-visuals figure img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:1!important;object-fit:contain!important}
 body.home-page .lx2-guest img{display:block;max-width:100%;height:auto;object-fit:cover}
 body.home-page .lx2-feature,body.home-page .lx2-visuals,body.home-page .lx2-visuals figure{min-width:0!important;max-width:100%}
 
@@ -409,6 +409,40 @@ body.home-page .lx-youtube-section .lx2-button svg{width:25px;height:20px;flex:0
 body.home-page .lx-youtube-section .lx2-button--red svg path{fill:var(--red-deep)}
 @media(max-width:820px){body.home-page .lx-youtube-layout{grid-template-columns:1fr}body.home-page .lx-youtube-art{max-width:560px}}
 @media(max-width:620px){body.home-page .lx-youtube-section .lx2-button{padding-inline:14px!important;font-size:14px!important}}
+
+/* Square artwork, fitted frames and restrained depth. */
+body.lx-content-page .lx-project-visual{width:min(100%,480px);margin:36px auto;aspect-ratio:1;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--paper)}
+body.lx-content-page .lx-project-visual img{display:block;width:100%;height:100%;object-fit:contain}
+body :is(.lx-media-frame,.lx3-cover--provided,.lx2-feature-media,.lx2-guest-art){transition:transform 200ms ease,box-shadow 200ms ease}
+@media(hover:hover) and (pointer:fine){
+ body :is(.lx-media-frame,.lx3-cover--provided,.lx2-feature-media,.lx2-guest-art):hover{transform:translateY(-3px);box-shadow:0 12px 28px rgb(11 11 12 / .12)}
+}
+body :is(.lx-media-frame,.lx3-cover--provided):focus-within{outline:3px solid var(--red-deep);outline-offset:4px}
+
+/* Collaborations: roomy horizontal cards and an entirely light process area. */
+body.lx-content-page.lx-collab-page main .lx-collab-hero{padding:clamp(24px,4vw,48px)!important}
+body.lx-content-page.lx-collab-page main .lx-collab-hero h1{font-size:clamp(36px,5vw,66px)!important;max-width:18ch;margin:14px 0 24px!important}
+body.lx-content-page.lx-collab-page main .lx-collab-hero>p{max-width:68ch;font-size:18px;line-height:1.65}
+body.lx-content-page.lx-collab-page main .lx-collab-cards{grid-template-columns:1fr;gap:20px}
+body.lx-content-page.lx-collab-page main .lx-collab-card{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);align-items:start;gap:24px;padding:clamp(24px,3.5vw,38px)!important}
+body.lx-content-page.lx-collab-page main .lx-collab-card::before{display:none}
+body.lx-content-page.lx-collab-page main .lx-collab-card h2{margin:0!important;font-size:clamp(24px,2.8vw,32px)!important}
+body.lx-content-page.lx-collab-page main .lx-collab-card p{font-size:16px;line-height:1.7}
+body.lx-content-page.lx-collab-page main .lx-collab-process{background:var(--paper)!important;color:var(--ink)!important;border:1px solid var(--line);border-radius:8px;padding:clamp(24px,4vw,40px)}
+body.lx-content-page.lx-collab-page main .lx-collab-process h2{color:var(--ink)!important;margin:0 0 28px}
+body.lx-content-page.lx-collab-page main .lx-collab-steps{grid-template-columns:1fr;gap:16px}
+body.lx-content-page.lx-collab-page main .lx-collab-step{display:grid;grid-template-columns:40px minmax(0,.6fr) minmax(0,1.4fr);gap:20px;align-items:start;padding:24px!important;border:1px solid var(--line);border-radius:6px;background:var(--bg)!important}
+body.lx-content-page.lx-collab-page main .lx-collab-step :is(h3,p){margin:0;color:var(--ink)!important}
+body.lx-content-page.lx-collab-page main .lx-collab-step h3{font-size:22px}
+body.lx-content-page.lx-collab-page main .lx-collab-step p{font-size:16px;line-height:1.65}
+@media(max-width:620px){
+ body.lx-content-page.lx-collab-page main .lx-collab-card{grid-template-columns:1fr;gap:16px}
+ body.lx-content-page.lx-collab-page main .lx-collab-step{grid-template-columns:32px minmax(0,1fr);gap:12px}
+ body.lx-content-page.lx-collab-page main .lx-collab-step p{grid-column:2}
+}
+@media(prefers-reduced-motion:reduce){
+ body :is(.lx-media-frame,.lx3-cover--provided,.lx2-feature-media,.lx2-guest-art){transition:none!important;transform:none!important}
+}
 @media(prefers-reduced-motion:reduce){
  body:is(.home-page,.lx-content-page) .lx-action,
  body:is(.home-page,.lx-content-page) .lx-action::before,

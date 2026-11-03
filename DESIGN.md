@@ -73,6 +73,14 @@ La copertina Welcome to the Paradise fornita successivamente sostituisce il post
 
 Palette, contenuti approvati e ordine delle sezioni preservati. Cornici dimensionate sulle immagini, vecchi stili di testo incoerenti riallineati ai token, risposta alla pressione più rapida, focus gestito anche al cambio del breakpoint del menu. Dettagli ed evidenze in AUDIT_GENERALE.md.
 
+## Correzioni richieste dopo il rilascio — 3 novembre 2026
+
+- Favicon derivata dal logo originale della hero, con SVG autonomo, PNG 32/192, ICO e icona Apple 180. Nome file aggiornato per evitare il riuso della vecchia icona in cache.
+- Galleria homepage e visual della pagina Progetto utilizzano copertine quadrate originali con object-fit contain; i poster verticali restano archiviati, non sono deformati o ritagliati.
+- Effetti leggeri sui riquadri, con movimento disabilitato quando richiesto dall'utente del dispositivo.
+- Chi è Lune_X descrive il progetto; la selezione dell'artista umano compare sotto un sottotitolo distinto.
+- Collaborazioni conserva i contenuti ma usa card orizzontali ampie, padding corretto e una sezione del processo chiara, senza il vecchio fondo nero. Tutte le varianti IT/EN/ES sono aggiornate.
+
 ## Architettura e compatibilità
 
 - GitHub Pages statico, percorso base di progetto `/Lune_X/`
