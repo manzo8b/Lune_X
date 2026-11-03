@@ -34,10 +34,7 @@
   await convert(out+"/lunex-logo-header.avif",out+"/lunex-logo-rbn.avif","logo");
   await convert(out+"/lunex-hero-headphones.avif",out+"/lunex-hero-rbn.avif","hero");
 
-  // Retain original release covers; recolour only three decorative marketing mockups.
-  for(const name of ["eclipse-dual-billboard","dark-desire-cassette","welcome-to-paradise-promo"]){
-    await convert(out+"/"+name+".webp",out+"/"+name+"-rbn.avif","hero");
-  }
+  // Promotional posters retain their original colours (explicit user requirement).
   const base="assets/social";
   await fs.mkdir(base,{recursive:true});
   const logo=await sharp(out+"/lunex-logo-rbn.avif").resize({width:320}).png().toBuffer();

@@ -1,0 +1,7 @@
+.DS_Store
+_site/
+qa/node_modules/
+qa/screenshots/
+qa/quality-results.json
+qa/lighthouse-*.json
+qa/local-*.json

@@ -1,14 +1,16 @@
 name: LUNE_X — Playwright Visual QA
 on:
   push:
-    branches: [main, redesign-v2]
+    branches: [main, redesign-v2, codex/web-architect-v3]
     paths:
       - 'index.html'
       - 'en/**'
       - 'es/**'
       - '*.html'
       - 'assets/css/**'
-      - 'assets/images/lunex-reference-*.svg'
+      - 'assets/js/**'
+      - 'assets/images/**'
+      - 'assets/covers/**'
       - 'qa/**'
       - '.github/workflows/quality.yml'
   workflow_dispatch:

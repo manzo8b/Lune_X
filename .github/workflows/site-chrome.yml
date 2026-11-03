@@ -1,10 +1,7 @@
 name: Lune_X — Unify site navigation and conversions
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/scripts/apply-site-chrome.mjs'
-      - '.github/workflows/site-chrome.yml'
+
 permissions:
   contents: write
 jobs:
