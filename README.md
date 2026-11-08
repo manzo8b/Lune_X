@@ -1,5 +1,9 @@
 # Lune_X — official artist landing
 
+**[Sito ufficiale e ascolto](https://manzo8b.github.io/Lune_X/)** · **[Discografia](https://manzo8b.github.io/Lune_X/discography.html)** · [Press kit](https://manzo8b.github.io/Lune_X/press.html)
+
+Lune_X è un progetto musicale originale di elettronica e dance-pop, con direzione creativa umana e produzione assistita da IA. Questo repository contiene il sito dell'artista; le piattaforme di streaming sono raggiungibili dai collegamenti ufficiali sul sito.
+
 ## Versione completa — 2 novembre 2026
 
 Dieci copertine integrate, originali archiviati in assets/covers/originals, tre lingue e 24 pagine. Rifiniture visive, narrazione, pulsanti e audit conservativo completati. PROJECT_MEMORY.md conserva preferenze, riferimenti e informazioni per proseguire il progetto. Pubblicazione GitHub Pages autorizzata dall’utente; il workflow prepara solo i file runtime in _site, escludendo master e note. Le sezioni seguenti conservano lo storico delle revisioni.
