@@ -35,3 +35,12 @@ Il workflow Pages prepara _site con HTML, lingue e asset di runtime; esclude mas
 ## Limiti da non dimenticare
 
 Non dichiarare piena conformità WCAG o prestazioni sul campo sulla base dei soli controlli statici/browser. Restano da verificare o completare i collegamenti diretti delle pubblicazioni ancora associati al profilo artista e gli eventuali canali di contatto aggiuntivi. Non inventarli.
+
+## Hub ufficiale e social — 9 novembre 2026
+
+- Nuovo link-in-bio indipendente e gratuito: https://manzo8b.github.io/Lune_X/links/ (`links/index.html`), con interfaccia mobile-first, bianco/rosso/nero, selettore IT/EN/ES, sezioni Apple Music, Spotify, video YouTube, Short, sito, SoundCloud, Suno, Instagram, TikTok, Facebook e X.
+- `.github/scripts/prepare-pages.mjs` ora include la cartella `links` nel bundle `_site`; senza questa modifica l'hub non era pubblicato da GitHub Pages. URL da verificare pubblicamente a deploy completato.
+- Aggiornate navigazioni mobile e footer delle 24 pagine IT/EN/ES per raggiungere l'hub, e sitemap.xml con una nuova voce per /links/.
+- Nessuna connessione Buffer modificata. Tre canali confermati in Buffer: Instagram @lune_x.it, Facebook LUNEX, X @lune_Xit. TikTok @lunex.it resta gestito separatamente.
+- Nel nuovo hub: Apple Music https://music.apple.com/it/artist/lune-x/6776382449 ; Spotify https://open.spotify.com/artist/2uPEaolYUj7WisHdewH5vQ ; YouTube https://www.youtube.com/@lune_xmusic ; video https://youtu.be/FXNi3lkFCdA ; Short https://youtube.com/shorts/6eApJ8gMr0k ; SoundCloud https://soundcloud.com/lune_x ; Suno https://suno.com/@lune_x ; Facebook pagina https://facebook.com/1172736345926561 ; Instagram https://instagram.com/lune_x.it ; X https://twitter.com/lune_Xit ; TikTok https://www.tiktok.com/@lunex.it.
+- I campi link-in-bio su account di terze parti NON sono stati aggiornati: strumenti Buffer disponibili non modificano biografie né campi sito web. Non dichiarare tali aggiornamenti senza verifica diretta.
