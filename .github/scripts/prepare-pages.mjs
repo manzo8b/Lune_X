@@ -10,7 +10,7 @@ for (const file of await readdir(root)) {
     await cp(path.join(root, file), path.join(target, file));
   }
 }
-for (const folder of ['en', 'es', 'assets']) {
+for (const folder of ['en', 'es', 'assets', 'links']) {
   await cp(path.join(root, folder), path.join(target, folder), {
     recursive: true,
     filter: source => !source.includes(`${path.sep}originals`) && !source.endsWith('.md'),
