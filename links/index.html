@@ -36,7 +36,7 @@ a{color:inherit}button{font:inherit}button:focus-visible,a:focus-visible{outline
 h1{font-size:clamp(1.45rem,4.2vw,2.55rem);font-weight:650;letter-spacing:-.056em;line-height:1.13;margin:14px auto 12px;max-width:660px}
 .hero p{max-width:590px;margin:0 auto;color:#666771;font-size:clamp(.86rem,1.7vw,.98rem)}
 .pulse{width:100%;max-width:380px;margin:24px auto 12px;display:flex;justify-content:center;align-items:center;gap:3px;height:26px}
-.pulse i{display:block;width:3px;border-radius:3px;background:linear-gradient(180deg,#f03245,#cfd1d5);height:calc(5px + (var(--n) * 1px));transform-origin:50% 50%;animation:beat calc(.7s + var(--n)*.06s) ease-in-out infinite alternate;animation-delay:calc(var(--n)*-.09s)}
+.pulse i{display:block;width:3px;border-radius:3px;background:linear-gradient(180deg,#f03245,#cfd1d5);height:16px;transform-origin:50% 50%;animation:beat .95s ease-in-out infinite alternate;animation-delay:-.2s}.pulse i:nth-child(3n){height:26px;animation-duration:1.15s;animation-delay:-.55s}.pulse i:nth-child(4n){height:20px;animation-duration:.75s;animation-delay:-.35s}
 @keyframes beat{from{transform:scaleY(.42);opacity:.65}to{transform:scaleY(1);opacity:1}}
 .links{display:grid;gap:12px;margin:18px auto 0;max-width:660px}
 .group-label{font-size:.70rem;color:#6a6970;text-transform:uppercase;font-weight:750;letter-spacing:.16em;margin:20px 0 2px 8px}
