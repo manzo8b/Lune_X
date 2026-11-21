@@ -644,3 +644,40 @@ body.home-page .lx-holiday-cover:after{
  background:url("../covers/christmas-in-motion-960.webp") center / cover no-repeat;
  border-radius:15px;
 }
+
+
+/* Final reference: original approved mockup, authentic visual assets */
+body.home-page .lx2-hero-art{background:url("../images/lunex-approved-headphones.webp") center/contain no-repeat!important;filter:none!important}
+body.home-page .lx2-shell{width:min(calc(100% - 56px),1430px)!important}
+body.home-page .lx2-hero-layout{min-height:395px!important}
+body.home-page .lx2-hero-copy{padding:31px 0 25px!important}
+body.home-page .lx2-display{font-size:clamp(44px,4.3vw,67px)!important;line-height:1.04!important}
+body.home-page .lx2-lede{font-size:clamp(18px,1.76vw,24px)!important}
+body.home-page .lx2-hero-art{min-height:300px!important;max-height:395px!important}
+body.home-page .lx2-marquee{display:none!important}
+body.home-page #anteprime{padding-block:23px 32px!important;background:transparent!important}
+body.home-page #anteprime .lx2-section-head{display:flex!important;justify-content:space-between!important;align-items:end!important;gap:20px!important}
+body.home-page #anteprime .lx2-section-head .lx2-title{font:700 clamp(23px,2vw,31px)/1.15 "Instrument Sans",system-ui,sans-serif!important;letter-spacing:-.035em!important;margin:3px 0!important}
+body.home-page #anteprime .lx2-section-head>p{font-size:13px!important;line-height:1.5!important;max-width:45ch!important;margin:0!important}
+body.home-page #anteprime .lx2-tracks{margin-top:16px!important}
+body.home-page .lx2-track{min-height:0!important}
+body.home-page .lx-holiday{padding-bottom:42px!important}
+body.home-page .lx-holiday-panel{min-height:345px!important}
+body.home-page .lx-holiday-cover{max-width:380px!important;display:block!important;background:#fff!important}
+body.home-page .lx-holiday-cover:before,body.home-page .lx-holiday-cover:after{display:none!important}
+body.home-page .lx-holiday-cover>img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;aspect-ratio:1!important;border-radius:15px!important}
+body .lx-site-header .lx-mark{width:clamp(196px,21vw,274px)!important;flex-shrink:0!important}
+body .lx-site-header .lx-mark img{filter:drop-shadow(0 1px 1px rgba(17,15,22,.54)) drop-shadow(0 4px 7px rgba(17,15,22,.20))!important}
+@media(min-width:1121px){body .lx-site-header .lx-mark{width:300px!important}body .lx-site-header .lx-mark img{max-height:85px!important}}
+@media(min-width:761px) and (max-width:1120px){body .lx-site-header .lx-mark{width:205px!important}body .lx-site-header .lx-mark img{max-height:72px!important}}
+@media(max-width:760px){
+body.home-page .lx2-shell{width:calc(100% - 28px)!important;padding-inline:0!important}
+body.home-page .lx2-hero-copy{padding:35px 0 20px!important}
+body.home-page .lx2-display{font-size:clamp(40px,10.4vw,56px)!important}
+body.home-page .lx2-hero-art{min-height:210px!important;max-height:260px!important}
+body.home-page #anteprime .lx2-section-head{display:block!important}
+body.home-page #anteprime .lx2-section-head>p{margin-top:9px!important}
+body.home-page .lx2-track{padding:12px!important}
+body .lx-site-header .lx-mark{width:176px!important}
+body .lx-site-header .lx-mark img{max-height:65px!important}
+}
