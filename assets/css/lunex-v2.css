@@ -545,3 +545,59 @@ body .lx-site-footer .lx-footer-brand img{object-fit:contain!important;height:au
  body.home-page .lx2-track,body.home-page .lx3-release,body.home-page .lx3-cover img{transition:none!important;transform:none!important}
  body.home-page .lx2-track:hover,body.home-page .lx3-release:hover,body.home-page .lx3-release:hover img{transform:none!important}
 }
+
+
+/* Christmas in Motion: album campaign only. The rest of the site remains evergreen.
+   Baubles reuse the six *actual* catalogue cover assets; no faux release cards. */
+body.home-page .lx-holiday{padding:4px 0 clamp(46px,5vw,77px)!important;background:transparent!important}
+body.home-page .lx-holiday-panel{max-width:1440px;position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(200px,31%) minmax(260px,33%) minmax(275px,36%);align-items:center;gap:clamp(20px,2.5vw,40px);min-height:365px;padding:clamp(24px,2.8vw,42px);overflow:hidden;border-radius:32px;border:1.5px solid rgba(255,255,255,.98);background:radial-gradient(circle at 87% 25%,rgba(255,227,188,.54),transparent 32%),linear-gradient(125deg,#fffefc,#f8f4f7 62%,#f9f6f7);box-shadow:0 25px 55px rgba(54,36,54,.10),0 4px 15px rgba(54,36,54,.04)}
+body.home-page .lx-holiday-panel:before{content:"";position:absolute;inset:0 0 auto;height:23px;pointer-events:none;background:repeating-linear-gradient(108deg,transparent 0 52px,rgba(143,20,31,.09) 56px 65px,transparent 73px 110px)}
+body.home-page .lx-holiday-panel:after{content:"";position:absolute;left:-4%;right:-5%;bottom:-29px;height:53px;border:10px solid rgba(185,13,31,.55);border-top:0;border-radius:0 0 50% 50%;filter:blur(.5px);transform:rotate(-1deg);pointer-events:none}
+body.home-page .lx-holiday-cover{position:relative;width:100%;min-height:0;aspect-ratio:1;overflow:hidden;align-self:center;border:6px solid #fff;border-radius:21px;background:radial-gradient(ellipse at 25% 22%,#713019 0,#27141c 55%,#100e18 100%);box-shadow:0 15px 28px rgba(38,17,29,.25),0 0 0 1px rgba(200,159,101,.25);display:flex;flex-direction:column;align-items:center;justify-content:center}
+body.home-page .lx-holiday-cover:before{content:"✦";position:absolute;top:3%;left:42%;font-size:54px;line-height:1;color:#f9d896;z-index:2;text-shadow:0 0 22px #eeb55b,0 0 44px #eeb55b}
+body.home-page .lx-holiday-cover-gallery{position:absolute;inset:5% 5% 4%;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;align-content:center;gap:6%;opacity:.7;transform:rotate(-5deg) scale(.92)}
+body.home-page .lx-holiday-cover-gallery img{width:100%;height:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:3px solid rgba(250,202,111,.95);box-shadow:inset 0 0 14px #fff,0 0 24px rgba(255,197,99,.48)}
+body.home-page .lx-holiday-cover-label{position:absolute;top:17%;z-index:3;color:#fff7eb;font-weight:800;font-size:12px;letter-spacing:.3em;text-shadow:0 2px 7px #130c11}
+body.home-page .lx-holiday-cover-title{position:relative;z-index:3;text-align:center;font:italic 400 clamp(27px,3.4vw,52px)/1.04 Georgia,serif;color:#fff7eb;text-shadow:0 3px 17px #100912,0 0 35px #140a11;pointer-events:none}
+body.home-page .lx-holiday-cover-title i{color:#ffbbbe}
+body.home-page .lx-holiday-copy{position:relative;z-index:2;max-width:480px;padding:12px 0}
+body.home-page .lx-holiday-kicker{display:inline-flex;margin:0 0 17px;padding:9px 16px;border-radius:999px;background:#c82324;color:#fff;font-size:11px;font-weight:800;letter-spacing:.12em;line-height:1}
+body.home-page .lx-holiday-copy h2{margin:0 0 15px;color:#17131b;font:italic 400 clamp(34px,3.6vw,55px)/1.03 Georgia,"Times New Roman",serif;letter-spacing:-.045em}
+body.home-page .lx-holiday-copy h2 em{font-weight:400;color:#b20d30}
+body.home-page .lx-holiday-description{font-size:16px;line-height:1.6;color:#302b34;max-width:32ch;margin:0 0 12px}
+body.home-page .lx-holiday-facts{font-size:12px;letter-spacing:.03em;color:#66606c;margin:0 0 20px}
+body.home-page .lx-holiday-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+body.home-page .lx-holiday-actions a{min-height:46px;padding:12px 21px;border-radius:999px;font-size:14px;font-weight:750;line-height:1.4;text-decoration:none!important;transition:transform .2s ease,box-shadow .2s ease;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+body.home-page .lx-holiday-primary{background:linear-gradient(130deg,#ed302c,#a60b25);color:#fff!important;box-shadow:0 8px 18px rgba(151,24,32,.19)}
+body.home-page .lx-holiday-secondary{background:rgba(255,255,255,.8);border:1px solid #d9cbd0;color:#3b2630!important}
+body.home-page .lx-holiday-ornaments{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 14px;padding:38px 0 6px;align-items:center;justify-items:center}
+body.home-page .lx-holiday-bauble{position:relative;width:min(100%,120px);aspect-ratio:1;border-radius:50%;isolation:isolate;box-shadow:inset 0 0 13px rgba(255,251,220,.6),0 12px 15px rgba(61,35,29,.15),0 0 0 4px #dfb25a,0 0 0 6px #fff9e7;transition:transform .3s ease;overflow:visible}
+body.home-page .lx-holiday-bauble:before{content:"";position:absolute;z-index:3;width:26px;height:13px;top:-16px;left:50%;transform:translateX(-50%);border:2px solid #c38a42;border-radius:6px 6px 1px 1px;background:linear-gradient(#f9eab4,#c78b37)}
+body.home-page .lx-holiday-bauble:after{content:"";position:absolute;z-index:3;top:5%;left:18%;width:28%;height:18%;border-radius:50%;background:rgba(255,255,255,.59);filter:blur(5px);transform:rotate(-32deg)}
+body.home-page .lx-holiday-bauble img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;box-shadow:inset 0 0 18px rgba(248,188,78,.4)}
+body.home-page .lx-holiday-string{position:absolute;z-index:0;bottom:100%;left:50%;height:45px;border-left:1.5px solid #b38c54;pointer-events:none}
+body.home-page .lx-holiday-star{position:absolute;left:44%;top:-5%;color:#d5a45e;font-size:58px;text-shadow:0 0 18px #f9dc98}
+@media (hover:hover) and (pointer:fine){
+ body.home-page .lx-holiday-bauble:hover{transform:translateY(-6px) rotate(3deg)}
+ body.home-page .lx-holiday-actions a:hover{transform:translateY(-2px);box-shadow:0 13px 23px rgba(151,24,32,.18)}
+}
+@media(max-width:1150px){
+ body.home-page .lx-holiday-panel{grid-template-columns:minmax(200px,35%) minmax(220px,1fr);gap:20px}
+ body.home-page .lx-holiday-ornaments{grid-column:1/-1;grid-template-columns:repeat(6,minmax(0,1fr));padding:20px 10px 0;gap:18px}
+ body.home-page .lx-holiday-bauble{width:min(100%,106px)}
+ body.home-page .lx-holiday-string{height:20px}
+ body.home-page .lx-holiday-star{display:none}
+}
+@media(max-width:680px){
+ body.home-page .lx-holiday-panel{grid-template-columns:1fr;gap:20px;padding:20px;border-radius:24px}
+ body.home-page .lx-holiday-cover{width:100%;max-width:420px;justify-self:center;margin:0 auto}
+ body.home-page .lx-holiday-copy{padding:6px 0}
+ body.home-page .lx-holiday-copy h2{font-size:clamp(37px,11vw,58px)}
+ body.home-page .lx-holiday-ornaments{grid-template-columns:repeat(3,minmax(0,1fr));gap:26px 20px;grid-column:auto;padding:14px 7px 0}
+ body.home-page .lx-holiday-bauble{width:min(100%,104px)}
+ body.home-page .lx-holiday-actions a{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+ body.home-page .lx-holiday-bauble,body.home-page .lx-holiday-actions a{transition:none!important;transform:none!important}
+ body.home-page .lx-holiday-bauble:hover,body.home-page .lx-holiday-actions a:hover{transform:none!important}
+}
