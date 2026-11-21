@@ -59,9 +59,13 @@ for(const [browserName,engine] of Object.entries({chromium,firefox,webkit})){
     });
     if(measured.documentWidth>width+2)problems.push(browserName+' '+lang+' '+width+' horizontal overflow '+measured.documentWidth+' offenders '+JSON.stringify(measured.offenders));
     if(measured.headingRight>width+2||measured.headingLeft< -2)problems.push(browserName+' '+lang+' '+width+' heading cropped');
-    if(!measured.heroArt?.includes('lunex-reference-hero.webp'))problems.push(browserName+' '+lang+' '+width+' approved logo background missing');
+    if(!measured.heroArt?.includes('lunex-approved-headphones.webp'))problems.push(browserName+' '+lang+' '+width+' approved headphone hero missing');
     if(width>=1024 && measured.heroLayout!=='grid')problems.push(browserName+' '+lang+' '+width+' desktop hero not two-column');
-    if(measured.heroBlend!=='multiply')problems.push(browserName+' '+lang+' '+width+' logo/background mismatch');
+    const logo=page.locator('.lx-site-header .lx-mark img');
+    const logoResult=await logo.evaluate(img=>({src:img.getAttribute('src'),ready:img.complete&&img.naturalWidth>0,display:getComputedStyle(img).display,visibility:getComputedStyle(img).visibility,opacity:getComputedStyle(img).opacity}));
+    if(!logoResult.src?.includes('lunex-logo-official.webp')||!logoResult.ready||logoResult.display==='none'||logoResult.visibility==='hidden'||Number(logoResult.opacity)<0.8)problems.push(browserName+' '+lang+' '+width+' official visible logo unavailable '+JSON.stringify(logoResult));
+    const christmas=page.locator('#christmas-in-motion img[src*="christmas-in-motion-960.webp"]');
+    if(await christmas.count()!==1||!(await christmas.evaluate(img=>img.complete&&img.naturalWidth>0)))problems.push(browserName+' '+lang+' '+width+' official Christmas cover missing');
     for(const sec of measured.sections)if(/rgb\(196, 36, 31\)|rgb\(16, 16, 16\)|rgb\(17, 17, 17\)/.test(sec.bg||''))problems.push(browserName+' '+lang+' '+width+' dark/red background '+sec.name+':'+sec.bg);
     if(width<=1024){
       const trigger=page.locator('.lx-mobile-menu summary');
