@@ -601,3 +601,36 @@ body.home-page .lx-holiday-star{position:absolute;left:44%;top:-5%;color:#d5a45e
  body.home-page .lx-holiday-bauble,body.home-page .lx-holiday-actions a{transition:none!important;transform:none!important}
  body.home-page .lx-holiday-bauble:hover,body.home-page .lx-holiday-actions a:hover{transform:none!important}
 }
+
+
+/* Shared card system: applies the approved soft/glass direction to existing inner pages.
+   Never replace real covers, links, descriptions or semantics with decorative placeholders. */
+body.lx-content-page main :is(.panel,.card,.album-grid .album,.lx-collab-card,.lx-collab-step){
+ background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(250,249,252,.94))!important;
+ border:1px solid #e4e0e9!important;
+ border-radius:clamp(16px,2vw,24px)!important;
+ box-shadow:0 10px 28px rgba(48,28,58,.07),0 2px 7px rgba(48,28,58,.025)!important;
+ transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease!important;
+}
+body.lx-content-page main .album-grid .album{border-left:1px solid #e4e0e9!important}
+body.lx-content-page main .panel{border-top:1px solid #e4e0e9!important}
+body.lx-content-page main :is(.album--with-cover>img,.preview-card img,.promo-card img,.guest-card img){border-radius:15px!important;overflow:hidden!important}
+body.lx-content-page main :is(.album-grid .album,.lx-collab-card) a{color:#aa0925!important;text-decoration-thickness:1px;text-underline-offset:4px}
+body.lx-content-page main :is(.panel,.card,.album-grid .album,.lx-collab-card,.lx-collab-step):focus-within{
+ outline:2px solid #bb1330!important;outline-offset:3px!important
+}
+body.lx-content-page main :is(.lx-collab-hero,.lx-collab-process){
+ border-radius:clamp(18px,2.5vw,28px)!important;
+ box-shadow:0 10px 30px rgba(45,28,53,.055)!important;
+}
+@media(hover:hover) and (pointer:fine){
+ body.lx-content-page main :is(.panel,.card,.album-grid .album,.lx-collab-card,.lx-collab-step):hover{
+  transform:translateY(-4px)!important;
+  box-shadow:0 17px 36px rgba(48,28,58,.12)!important;
+  border-color:#d8b8c5!important;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ body.lx-content-page main :is(.panel,.card,.album-grid .album,.lx-collab-card,.lx-collab-step){transition:none!important;transform:none!important}
+ body.lx-content-page main :is(.panel,.card,.album-grid .album,.lx-collab-card,.lx-collab-step):hover{transform:none!important}
+}
