@@ -452,3 +452,96 @@ body.lx-content-page.lx-collab-page main .lx-collab-step p{font-size:16px;line-h
  body:is(.home-page,.lx-content-page) .lx-action:active,
  body:is(.home-page,.lx-content-page) .lx-action:hover>span[aria-hidden]{transform:none!important;transition:none!important}
 }
+
+
+/* === LUNE_X / Restyling conservativo / mockup approvato 21-11-2026 ===
+ * Solo presentazione. Contenuti, 24 pagine, player, copertine e link restano intatti.
+ * Fonte visuale: mockup approvato dall'utente. Base informativa: sito ufficiale.
+ * Colori brand: perla, bianco, rosso Lune_X, inchiostro. No nuovi dati.
+ */
+:root{
+  --lx26-pearl:#f5f5f8;--lx26-white:#fff;--lx26-red:#c4241f;
+  --lx26-ink:#17151c;--lx26-subtle:#605f6d;
+  --lx26-edge:rgba(255,255,255,.88);
+  --lx26-glass:rgba(255,255,255,.84);
+  --lx26-shadow:0 12px 36px rgba(55,47,69,.09),0 2px 8px rgba(55,47,69,.04);
+}
+body.home-page{background:var(--lx26-pearl)!important;color:var(--lx26-ink)!important}
+body.home-page .lx2-shell{max-width:1430px!important;padding-inline:clamp(20px,4.2vw,62px)!important}
+body .lx-site-header{background:rgba(251,251,253,.88)!important;backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border-bottom:1px solid rgba(210,207,218,.48)!important;box-shadow:none!important}
+body .lx-site-header .lx-top-rail{display:none!important}
+body .lx-site-header .lx-mainbar{max-width:1510px!important;min-height:86px!important;padding:10px clamp(18px,4vw,56px)!important;gap:clamp(13px,1.7vw,30px)!important}
+body .lx-site-header .lx-mark{width:clamp(178px,18.5vw,265px)!important;height:auto!important;min-height:57px!important;flex:0 0 auto!important;background:none!important;align-items:center}
+body .lx-site-header .lx-mark img{opacity:1!important;visibility:visible!important;width:100%!important;height:auto!important;max-height:69px!important;object-fit:contain!important;mix-blend-mode:normal!important;filter:drop-shadow(0 4px 6px rgba(30,26,37,.13))}
+body .lx-site-header .lx-primary-nav{gap:2px!important}
+body .lx-site-header .lx-primary-nav a{padding:11px 14px!important;border-radius:999px!important;border:1px solid transparent!important;background:transparent!important;color:#25212a!important;font-size:14px!important;font-weight:650!important}
+body .lx-site-header .lx-primary-nav a:hover,
+body .lx-site-header .lx-primary-nav a[aria-current=page]{background:rgba(196,36,31,.065)!important;color:#a50f15!important}
+body .lx-site-header .lx-listen-cta{background:linear-gradient(120deg,#e53129,#ac0921)!important;border-radius:999px!important;box-shadow:0 8px 16px rgba(165,15,21,.14)!important;padding-inline:20px!important}
+body.home-page .lx2-main{background:linear-gradient(165deg,#f8f8fb 0%,#f4f5fa 43%,#fbf9fa 100%)!important}
+body.home-page .lx2-hero{background:radial-gradient(ellipse at 70% 33%,rgba(218,221,244,.56),transparent 54%),linear-gradient(140deg,#f7f8fb 0%,#eceef5 100%)!important;border:0!important;overflow:hidden!important}
+body.home-page .lx2-hero:before,body.home-page .lx2-hero:after{display:none!important}
+body.home-page .lx2-hero-layout{max-width:1430px!important;min-height:470px!important;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)!important;gap:clamp(20px,2.2vw,40px)!important}
+body.home-page .lx2-hero-copy{padding:clamp(38px,6vw,76px) 0 clamp(28px,5vw,60px)!important;max-width:745px!important}
+body.home-page .lx2-hero-copy .lx2-eyebrow{display:block!important;color:#a50f15!important;font-size:11px!important;letter-spacing:.32em!important}
+body.home-page .lx2-display{max-width:760px!important;font:400 clamp(43px,5.2vw,79px)/1.04 Georgia,"Times New Roman",serif!important;letter-spacing:-.049em!important;color:#1c1821!important;overflow-wrap:normal!important;margin:12px 0 12px!important}
+body.home-page .lx2-display em{font-style:italic;font-weight:400;color:#b00d2e}
+body.home-page .lx2-lede{font:400 clamp(18px,2vw,26px)/1.28 Georgia,"Times New Roman",serif!important;max-width:700px!important;margin:0 0 18px!important;color:#3a3540!important}
+body.home-page .lx2-detail{max-width:580px!important;font-size:15px!important;line-height:1.54!important;border-left:3px solid #d52332!important;padding-left:19px!important;margin-bottom:22px!important;color:#30303b!important}
+body.home-page .lx2-button{border-radius:999px!important;min-height:47px!important;padding-inline:24px!important;box-shadow:0 5px 15px rgba(33,20,46,.065)!important}
+body.home-page .lx2-button--red{background:linear-gradient(125deg,#ec322b,#ab0827)!important;color:#fff!important}
+body.home-page .lx2-hero-art{aspect-ratio:1.22!important;min-height:370px!important;background:url("../images/lunex-reference-hero.webp") center/contain no-repeat!important;filter:drop-shadow(0 24px 34px rgba(65,55,99,.11))!important}
+body.home-page .lx2-marquee{background:#fafafd!important;border-bottom:1px solid #e7e5ed!important}
+body.home-page .lx2-section{padding-block:clamp(36px,4.6vw,65px)!important}
+body.home-page .lx2-section-head{gap:12px 40px!important}
+body.home-page .lx2-title{font-family:Georgia,"Times New Roman",serif!important;font-weight:500!important;letter-spacing:-.045em!important;color:#17141d!important}
+body.home-page .lx2-tracks{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important;border:0!important;margin-top:26px!important}
+body.home-page .lx2-track{display:grid!important;grid-template-columns:82px minmax(0,1fr)!important;align-items:start!important;gap:12px!important;min-width:0!important;padding:13px!important;border:1px solid rgba(220,217,229,.78)!important;background:rgba(255,255,255,.84)!important;border-radius:23px!important;box-shadow:var(--lx26-shadow)!important;transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease!important}
+body.home-page .lx2-track-image{height:82px!important;width:82px!important;border-radius:15px!important;overflow:hidden!important}
+body.home-page .lx2-track-body{display:block!important;padding:0!important;min-width:0!important}
+body.home-page .lx2-track-body h3{font:700 clamp(14px,1.25vw,17px)/1.25 "Instrument Sans",system-ui,sans-serif!important;margin:2px 0 7px!important;color:#1f1924!important}
+body.home-page .lx2-track-index{font-size:9px!important;letter-spacing:.11em!important;margin:0 0 6px!important;color:#aa1728!important}
+body.home-page .lx2-track-desc{display:none!important}
+body.home-page .lx2-track-body audio{display:block!important;width:100%!important;max-width:100%!important;height:32px!important;margin:6px 0 4px!important}
+body.home-page .lx2-track-link{font-size:11px!important;line-height:1.4!important}
+body.home-page .lx2-track-foot{font-size:12px!important;line-height:1.5!important}
+body.home-page .lx3-catalog-grid{gap:18px!important}
+body.home-page .lx3-release{background:#fff!important;border:1px solid #e7e4ed!important;padding:12px!important;border-radius:22px!important;box-shadow:0 12px 28px rgba(26,21,38,.07)!important;transition:transform .23s ease,box-shadow .23s ease!important;min-width:0!important}
+body.home-page .lx3-cover,body.home-page .lx3-cover--provided{padding:0!important;border:none!important;box-shadow:none!important;border-radius:15px!important;background:#f7f6fa!important;overflow:hidden!important;aspect-ratio:1!important}
+body.home-page .lx3-cover img{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important;transition:transform .45s ease!important}
+body.home-page .lx3-release h3{font-size:15px!important;line-height:1.28!important;margin:12px 2px 6px!important}
+body.home-page .lx3-release p{margin-left:2px!important}
+body.home-page .lx3-release a{color:#ae1030!important;text-decoration:none!important}
+body.home-page .lx2-feature-media,body.home-page .lx-media-frame,body.home-page .lx-youtube-art a,body.home-page .lx2-guest-art{border-radius:24px!important;overflow:hidden!important;box-shadow:var(--lx26-shadow)!important}
+body.home-page .lx2-feature,body.home-page .lx2-statement,body.home-page .lx2-collab{background:linear-gradient(140deg,#fff,#f6f5fa)!important;border-color:#e9e5ee!important}
+body.home-page :is(.lx2-feature,.lx2-statement,.lx2-collab) .lx2-feature-title{color:#1c1721!important}
+body.home-page .lx2-guest-panel{border-radius:24px!important}
+body .lx-site-footer{background:#fff!important}
+body .lx-site-footer .lx-footer-grid img{object-fit:contain!important}
+body .lx-site-footer .lx-footer-brand img{object-fit:contain!important;height:auto!important}
+@media (hover:hover) and (pointer:fine){
+ body.home-page .lx2-track:hover,body.home-page .lx3-release:hover{transform:translateY(-5px)!important;box-shadow:0 20px 42px rgba(49,27,62,.14)!important;border-color:#dfbfc8!important}
+ body.home-page .lx3-release:hover img{transform:scale(1.045)!important}
+}
+@media(max-width:1080px){
+ body .lx-site-header .lx-mark{width:175px!important;min-height:43px!important}
+ body.home-page .lx2-hero-layout{grid-template-columns:1fr 1fr!important}
+ body.home-page .lx2-tracks{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ body.home-page .lx3-catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media(max-width:760px){
+ body .lx-site-header .lx-mainbar{min-height:69px!important;padding:10px 17px!important}
+ body .lx-site-header .lx-mark{width:162px!important;min-height:40px!important}
+ body.home-page .lx2-hero-layout{display:flex!important;flex-direction:column!important;gap:0!important;min-height:auto!important}
+ body.home-page .lx2-hero-copy{padding:38px 0 12px!important;width:100%!important}
+ body.home-page .lx2-display{font-size:clamp(40px,9.5vw,64px)!important;line-height:1.04!important}
+ body.home-page .lx2-hero-art{width:100%!important;min-height:270px!important;max-height:380px!important;aspect-ratio:1.46!important}
+ body.home-page .lx2-tracks{grid-template-columns:1fr!important;gap:14px!important}
+ body.home-page .lx3-catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+ body.home-page .lx3-release{padding:9px!important;border-radius:18px!important}
+ body.home-page .lx3-cover{border-radius:12px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ body.home-page .lx2-track,body.home-page .lx3-release,body.home-page .lx3-cover img{transition:none!important;transform:none!important}
+ body.home-page .lx2-track:hover,body.home-page .lx3-release:hover,body.home-page .lx3-release:hover img{transform:none!important}
+}
