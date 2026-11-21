@@ -634,3 +634,13 @@ body.lx-content-page main :is(.lx-collab-hero,.lx-collab-process){
  body.lx-content-page main :is(.panel,.card,.album-grid .album,.lx-collab-card,.lx-collab-step){transition:none!important;transform:none!important}
  body.lx-content-page main :is(.panel,.card,.album-grid .album,.lx-collab-card,.lx-collab-step):hover{transform:none!important}
 }
+
+
+/* The exact user-provided Christmas in Motion cover takes visual precedence as soon as
+   assets/covers/christmas-in-motion-960.webp is supplied. Until then, the block
+   uses a visibly provisional catalogue collage (draft PR, never production). */
+body.home-page .lx-holiday-cover:after{
+ content:"";position:absolute;inset:0;z-index:5;pointer-events:none;
+ background:url("../covers/christmas-in-motion-960.webp") center / cover no-repeat;
+ border-radius:15px;
+}
