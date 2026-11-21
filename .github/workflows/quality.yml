@@ -1,5 +1,7 @@
 name: LUNE_X — Playwright Visual QA
 on:
+  pull_request:
+    branches: [main]
   push:
     branches: [main, redesign-v2, codex/web-architect-v3]
     paths:
