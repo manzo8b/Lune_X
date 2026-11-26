@@ -16,7 +16,7 @@ export async function renderPoster(item,art,logo,fontFile,target){
  const W=1080,H=item.height,dark=item.dark===true,story=H===1920,ink=dark?'#F7F3EC':'#111111',paper=dark?'#0A0A0B':'#F7F3EC',red='#F12B28';
  let font=fontkit.openSync(fontFile);if(font.variationAxes?.wght)font=font.getVariation({wght:850});
  let normal=fontkit.openSync(fontFile);if(normal.variationAxes?.wght)normal=normal.getVariation({wght:500});
- const top=story?286:112,artY=story?565:365,artH=story?885:725;
+ const top=story?308:112,artY=story?565:365,artH=story?885:725;
  // The generated scene is the art; native path typography preserves exact wording.
  const scene=await sharp(art).rotate().resize(936,artH,{fit:'cover',position:'centre'}).png().toBuffer();
  const mark=await sharp(logo).rotate().resize(94,94,{fit:'contain',background:'#FFFFFF'}).png().toBuffer();
@@ -32,7 +32,7 @@ export async function renderPoster(item,art,logo,fontFile,target){
  await sharp({create:{width:W,height:H,channels:3,background:paper}}).composite([{input:scene,left:72,top:artY},{input:svg,left:0,top:0,blend:'over'},{input:scene,left:72,top:artY},{input:mark,left:905,top:footer+27}]).png({compressionLevel:8}).toFile(target);
  const raw=await fs.readFile(target),meta=await sharp(raw).metadata();await sharp(raw).raw().toBuffer();
  if(meta.width!==W||meta.height!==H)throw Error('PNG dimensions failed');
- return {decoded:true,sha256:digest(raw),size_bytes:raw.length,width:W,height:H,text_rendering:'font outlines, no generated lettering',safe_zone:story?{left:72,right:72,top:249,bottom:236}:null,creative_review:'MF required',generator:'FLUX.2 klein 4B',original_logo:true,original_face_redrawn:false};
+ return {decoded:true,sha256:digest(raw),size_bytes:raw.length,width:W,height:H,text_rendering:'font outlines, no generated lettering',safe_zone:story?{left:72,right:72,top:250,bottom:250}:null,creative_review:'MF required',generator:'FLUX.2 klein 4B',original_logo:true,original_face_redrawn:false};
 }
 export async function renderReel(images,audio,fontFile,dest,{ffmpeg='ffmpeg',ffprobe='ffprobe'}={}){
  if(images.length<3||!audio)throw Error('Three finished images and a music excerpt required');
