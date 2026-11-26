@@ -1,6 +1,12 @@
 name: Lune_X private media production
 on:
   workflow_dispatch:
+    inputs:
+      diagnostic:
+        description: 'Verify the private render bridge without claiming work or calling models'
+        required: false
+        default: false
+        type: boolean
   schedule:
     - cron: '3-58/5 * * * *'
 permissions:
@@ -27,6 +33,7 @@ jobs:
         working-directory: .github/lunex-media
         run: npm ci --ignore-scripts
       - name: Verify free standard runner and media tools
+        if: github.event.inputs.diagnostic != 'true'
         env:
           RUNNER_ENVIRONMENT: ${{ runner.environment }}
         run: |
@@ -39,5 +46,7 @@ jobs:
           command -v ffprobe
       - name: Produce at most one approved media package
         working-directory: .github/lunex-media
+        env:
+          LUNEX_DIAGNOSTIC: ${{ github.event.inputs.diagnostic || 'false' }}
         run: node run.mjs
       # Private files, captions and signed URLs are never uploaded as Actions artifacts.

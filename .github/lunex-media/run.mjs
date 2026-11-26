@@ -17,6 +17,7 @@ async function upload(claim,file,qc,index,extra=false){
 }
 const dir=await fs.mkdtemp(path.join(os.tmpdir(),'lunex-media-'));let claim;
 try{
+ if(process.env.LUNEX_DIAGNOSTIC==='true'){const probe=await api('probe');if(!probe.ok||probe.claimed_work!==false||probe.model_calls!==0)throw Error('Diagnostic rejected');console.log(JSON.stringify({diagnostic:true,...probe}));}else{
  claim=await api('claim');if(claim.idle){console.log('No approved media work; no model call.');process.exitCode=0;}
  else{
   const sources={};for(const row of claim.sources)sources[row.role]=await download(row,path.join(dir,row.filename));
@@ -35,6 +36,7 @@ try{
    const reel=await renderReel(reelScenes,sources.source_audio,sources.source_font,dir);await upload(claim,reel.file,reel.qc,null,true);
   }
   const result=await api('finish',{task:claim.task.id,lease:claim.task.lease});console.log(JSON.stringify({state:result.result.status,task_id:result.result.task_id,publication:false}));
+ }
  }
 }catch(e){
  const message=String(e.message).replace(/https?:\/\/\S+/g,'[URL omitted]').slice(0,400);
